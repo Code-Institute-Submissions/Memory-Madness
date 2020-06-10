@@ -6,7 +6,7 @@ const button2 = document.getElementById("start-medium");
 const button3 = document.getElementById("start-hard");
 const button4 = document.getElementById("start-extrahard");
 const gameboard = document.getElementById("board");
-let clicks = document.getElementById("clicks");
+let clicks = document.getElementById("rotate-count");
 let firstcard;
 let secondcard;
 let isFirstCard = false;
@@ -23,7 +23,7 @@ let isFirstCard = false;
 
 // shuffle cards
 
-
+shufflecards();
 
 /*---------------------------------------------------------------timer*/
 
@@ -39,7 +39,7 @@ function timerEasy() {
       console.log("clicked timer easy");
     }
     if (remtime === 0) {
-      alert("out of time");
+      alert("sorry, out of time");
       clearInterval(time);
     }
   }, 1000);
@@ -60,7 +60,7 @@ function timerMedium() {
       console.log("clicked timer medium");
     }
     if (remtime === 0) {
-      alert("out of time");
+      alert("sorry, out of time");
       clearInterval(time);
     }
   }, 1000);
@@ -81,7 +81,7 @@ function timerHard() {
       console.log("clicked timer hard");
     }
     if (remtime === 0) {
-      alert("out of time");
+      alert("sorry, out of time");
       clearInterval(time);
     }
   }, 1000);
@@ -102,7 +102,7 @@ function timerExtraHard() {
       console.log("clicked timer extrahard");
     }
     if (remtime === 0) {
-      alert("out of time");
+      alert("sorry, out of time");
       clearInterval(time);
     }
   }, 1000);
@@ -119,15 +119,38 @@ cards.forEach(function (card) {
 });
 
 function turn() {
+    if (this === firstcard) return;  /* Code for blocking double click taken from youtube freeCodeCamp.org*/
   this.classList.add("rotate");
   if (!isFirstCard) {
     isFirstCard = true;
     firstcard = this;
     console.log("first card");
-    console.log(this);
   } else {
     isFirstCard = false;
     secondcard = this;
 
     console.log("second card");
+
+    if (firstcard.dataset.colours === secondcard.dataset.colours) {
+      firstcard.removeEventListener("click", turn);
+      secondcard.removeEventListener("click", turn);
+      console.log("Function fired");
+    } else {
+      setTimeout(function () {
+        firstcard.classList.remove("rotate");
+        secondcard.classList.remove("rotate");
+      }, 800);
+    }
   }}
+
+
+/*---------------------------------------------------------------shuffle cards----taken from youtube channel*/
+//
+function shufflecards() {
+  cards.forEach(function (card) {
+    let randomPosition = Math.floor(Math.random() * 16);
+    card.style.order = randomPosition;
+  });
+  console.log("Shuffle cards");
+}
+

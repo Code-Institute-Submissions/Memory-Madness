@@ -10,81 +10,85 @@
 <title>Hogwarts Memory Madness</title>
 </head>
 <body id="game-screen">
-<button id="start" class="start-btn">Start</button>
+<button id="start-easy" class="start-btn">Start Easy</button>
+<button id="start-medium" class="start-btn">Start Medium</button>
+<button id="start-hard" class="start-btn">Start Hard</button>
+<button id="start-extrahard" class="start-btn">Start Extra Hard</button>
 
-
-<div id="countdown">Time:</div>
-
+<div id="countdown">Time: <span  id="time"> --- </span></div>
+<div id="clicks" >Cards Turned: <span id="rotate-count">0</span></div>
 
 <div id="board">
-    <div class="card">
+    <div class="card" data-colours="red">
         <div class="bcard"></div>
         <div class="fcard">1</div>
     </div>
-        <div class="card">
+        <div class="card" data-colours="red">
         <div class="bcard"></div>
         <div class="fcard">1</div>
     </div>
-        <div class="card">
+        <div class="card" data-colours="blue">
         <div class="bcard"></div>
         <div class="fcard">2</div>
     </div>
-        <div class="card">
+        <div class="card" data-colours="blue">
         <div class="bcard"></div>
         <div class="fcard">2</div>
     </div>
-        <div class="card">
+        <div class="card" data-colours="green">
         <div class="bcard"></div>
         <div class="fcard">3</div>
     </div>
-        <div class="card">
+        <div class="card" data-colours="green">
         <div class="bcard"></div>
         <div class="fcard">3</div>
     </div>
-        <div class="card">
+        <div class="card" data-colours="yellow">
         <div class="bcard"></div>
         <div class="fcard">4</div>
     </div>
-        <div class="card">
+        <div class="card" data-colours="yellow">
         <div class="bcard"></div>
         <div class="fcard">4</div>
     </div>
-        <div class="card">
+        <div class="card" data-colours="purple">
         <div class="bcard"></div>
         <div class="fcard">5</div>
     </div>
-        <div class="card">
+        <div class="card" data-colours="purple">
         <div class="bcard"></div>
         <div class="fcard">5</div>
     </div>
-        <div class="card">
+        <div class="card" data-colours="black">
         <div class="bcard"></div>
         <div class="fcard">6</div>
     </div>
-        <div class="card">
+        <div class="card" data-colours="black">
         <div class="bcard"></div>
         <div class="fcard">6</div>
     </div>
-        <div class="card">
+        <div class="card" data-colours="white">
         <div class="bcard"></div>
         <div class="fcard">7</div>
     </div>
-        <div class="card">
+        <div class="card" data-colours="white">
         <div class="bcard"></div>
         <div class="fcard">7</div>
     </div>
-        <div class="card">
+        <div class="card" data-colours="grey">
         <div class="bcard"></div>
         <div class="fcard">8</div>
     </div>
-        <div class="card">
+        <div class="card" data-colours="grey">
         <div class="bcard"></div>
         <div class="fcard">8</div>
     </div>
 </div>
+
 <script src="assets/js/game.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 </html>
+
