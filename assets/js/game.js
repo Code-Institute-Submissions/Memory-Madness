@@ -6,7 +6,7 @@ const button2 = document.getElementById("start-medium");
 const button3 = document.getElementById("start-hard");
 const button4 = document.getElementById("start-extrahard");
 const gameboard = document.getElementById("board");
-let clicks = document.getElementById("rotate-count");
+let clicks = 1;
 let firstcard;
 let secondcard;
 let isFirstCard = false;
@@ -142,6 +142,18 @@ function turn() {
       }, 800);
     }
   }}
+
+
+/*---------------------------------------------------------------count cards clicked*/
+cards.forEach(function (card) {
+  card.addEventListener("click", clicker);
+});
+function clicker() {
+    clicksAdd = clicks++;
+    let countAdd = document.getElementById("rotate-count");
+    countAdd.innerText = clicksAdd;
+    console.log("clicks counted");
+}
 
 
 /*---------------------------------------------------------------shuffle cards----taken from youtube channel*/
