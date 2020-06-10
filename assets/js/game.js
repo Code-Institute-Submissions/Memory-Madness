@@ -10,9 +10,7 @@ let clicks = 1;
 let firstcard;
 let secondcard;
 let isFirstCard = false;
-
-
-
+const cardMatchArray = [];
 /*---------------------------------------------------------------start*/
 
 // reset card face
@@ -23,10 +21,10 @@ let isFirstCard = false;
 
 // shuffle cards
 
-shufflecards();
+/*shufflecards();*/
+
 
 /*---------------------------------------------------------------timer*/
-
 
 button1.addEventListener("click", timerEasy);
 function timerEasy() {
@@ -38,8 +36,13 @@ function timerEasy() {
       countdown.innerText = remtime;
       console.log("clicked timer easy");
     }
+  if (cardMatchArray.length === 16 && remtime > 0) {
+    document.getElementById("win").classList.remove("none");
+    console.log("winner");}
+
     if (remtime === 0) {
-      alert("sorry, out of time");
+    document.getElementById("lose").classList.remove("none");
+    console.log("lose");
       clearInterval(time);
     }
   }, 1000);
@@ -59,6 +62,9 @@ function timerMedium() {
       countdown.innerText = remtime;
       console.log("clicked timer medium");
     }
+      if (cardMatchArray.length === 16 && remtime > 0) {
+    document.getElementById("win").classList.remove("none");
+    console.log("winner");}
     if (remtime === 0) {
       alert("sorry, out of time");
       clearInterval(time);
@@ -80,6 +86,9 @@ function timerHard() {
       countdown.innerText = remtime;
       console.log("clicked timer hard");
     }
+      if (cardMatchArray.length === 16 && remtime > 0) {
+    document.getElementById("win").classList.remove("none");
+    console.log("winner");}
     if (remtime === 0) {
       alert("sorry, out of time");
       clearInterval(time);
@@ -101,6 +110,9 @@ function timerExtraHard() {
       countdown.innerText = remtime;
       console.log("clicked timer extrahard");
     }
+      if (cardMatchArray.length === 16 && remtime > 0) {
+    document.getElementById("win").classList.remove("none");
+    console.log("winner");}
     if (remtime === 0) {
       alert("sorry, out of time");
       clearInterval(time);
@@ -119,7 +131,8 @@ cards.forEach(function (card) {
 });
 
 function turn() {
-    if (this === firstcard) return;  /* Code for blocking double click taken from youtube freeCodeCamp.org*/
+  if (this === firstcard)
+    return; /* Code for blocking double click taken from youtube freeCodeCamp.org*/
   this.classList.add("rotate");
   if (!isFirstCard) {
     isFirstCard = true;
@@ -134,27 +147,34 @@ function turn() {
     if (firstcard.dataset.colours === secondcard.dataset.colours) {
       firstcard.removeEventListener("click", turn);
       secondcard.removeEventListener("click", turn);
-      console.log("Function fired");
+      setTimeout(function () {
+        firstcard.classList.add("fade-out");
+        secondcard.classList.add("fade-out");
+      }, 800);
+            console.log("Function fired");
+      cardMatchArray.push("firstcard");
+      cardMatchArray.push("secondcard");
+      console.log(cardMatchArray);
     } else {
       setTimeout(function () {
         firstcard.classList.remove("rotate");
         secondcard.classList.remove("rotate");
       }, 800);
     }
-  }}
-
+  }
+}
 
 /*---------------------------------------------------------------count cards clicked*/
+
 cards.forEach(function (card) {
   card.addEventListener("click", clicker);
 });
 function clicker() {
-    clicksAdd = clicks++;
-    let countAdd = document.getElementById("rotate-count");
-    countAdd.innerText = clicksAdd;
-    console.log("clicks counted");
+  clicksAdd = clicks++;
+  let countAdd = document.getElementById("rotate-count");
+  countAdd.innerText = clicksAdd;
+  console.log("clicks counted");
 }
-
 
 /*---------------------------------------------------------------shuffle cards----taken from youtube channel*/
 //
@@ -166,3 +186,20 @@ function shufflecards() {
   console.log("Shuffle cards");
 }
 
+/*---------------------------------------------------------------Game Over*/
+
+/*function gameOver() {
+      if (remtime === 0) {
+    document.getElementById("lose").classList.remove("none");
+    console.log("lose");
+  }
+}
+}*/
+
+/*---------------------------------------------------------------Win*/
+/*function win() {
+  if (cardMatchArray.length === 16 && remtime > 0) {
+    document.getElementById("win").classList.remove("none");
+    console.log("winner");
+  }
+}*/

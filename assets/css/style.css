@@ -4,12 +4,10 @@
     box-sizing: border-box;
 }
 
-
 #game-screen {
     height: 100vh;
     width: 100vw;
 }
-
 
 
 #board {
@@ -22,19 +20,20 @@
 
 
 
-
 /*---------------------------------------------------------------card*/
 
-
+.card.none {
+    display: none;
+}
 
 .card {
     height: 210px;
     width: 130px;
     margin: 10px 32px;
-    background-color: green;
     position: relative;
     transform-style: preserve-3d;
     transition: 1.0s;
+    border: none;
 }
 
 .bcard, .fcard {
@@ -49,17 +48,87 @@
     transform: rotateY(180deg);
 }
 
-.card:hover {
+.card.rotate {
     transition: transform 1.0s;
     transform: rotateY(180deg);
 }
 
+.fade-out {
+  animation: fadeOut ease 0.8s;
+  -webkit-animation: fadeOut ease 0.8s;
+  -moz-animation: fadeOut ease 0.8s;
+  -o-animation: fadeOut ease 0.8s;
+  -ms-animation: fadeOut ease 0.8s;
+}
+
+/*-----------------------www.medium.com*/
+@keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+}
+}
 
 
+/*---------------------------------------------------------------win*/
 
+.winner.none {
+    display: none;
+}
 
+.winner {
+    font-size: 100px;
+    color: orange;
+}
 
+/*---------------------------------------------------------------lose*/
 
+.lose.none {
+    display: none;
+}
+
+.lose {
+    font-size: 100px;
+    color: purple;
+}
 
 /*---------------------------------------------------------------colours*/
 
@@ -70,4 +139,5 @@
 .fcard {
     background-color: red;
 }
+
 
