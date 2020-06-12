@@ -21,14 +21,14 @@ const cardMatchArray = [];
 
 // shuffle cards
 
-/*shufflecards();*/
+shufflecards();
 
 
 /*---------------------------------------------------------------timer*/
 
 button1.addEventListener("click", timerEasy);
 function timerEasy() {
-  let time = 120;
+  let time = 50;
   setInterval(function () {
     let remtime = time--;
     if (remtime >= 0) {
@@ -38,6 +38,8 @@ function timerEasy() {
     }
   if (cardMatchArray.length === 16 && remtime > 0) {
     document.getElementById("win").classList.remove("none");
+    clearInterval(time);
+    document.getElementById("time").innerHTML = "Winner";
     console.log("winner");}
 
     if (remtime === 0) {
