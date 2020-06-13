@@ -1,95 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<title>Hogwarts Memory Madness</title>
-</head>
-<body id="game-screen">
-<button id="start-easy" class="start-btn">Start Easy</button>
-<button id="start-medium" class="start-btn">Start Medium</button>
-<button id="start-hard" class="start-btn">Start Hard</button>
-<button id="start-extrahard" class="start-btn">Start Extra Hard</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Hogwarts Memory Madness</title>
+  </head>
+  <h1 class="title">Hogwarts Memory Madness</h1>
+    <h3 class="message">
+      Welcome to Hogwarts Memory Madness. Draw on all the magical powers of
+      Hogwarts to match the cards and beat the clock.
+    </h3>
+  <body id="game-screen">
+    <div class="buttons">
+      <button id="start-easy" class="start-btn">Easy</button>
+      <button id="start-medium" class="start-btn">Medium</button>
+      <button id="start-hard" class="start-btn">Hard</button>
+      <button id="start-extrahard" class="start-btn">Expelliarmus</button>
+    </div>
 
-<div id="countdown">Time: <span  id="time"> --- </span></div>
-<div id="clicks" >Cards Turned: <span id="rotate-count"> -- </span></div>
-<div id="win" class="winner none">You are the next Dumbledore</div>
-<div id="lose" class="lose none">You are forced to join with Voldemort</div>
-<div id="board">
-    <div class="card" data-colours="red">
+    <div id="countdown">Time: <span id="time"> --- </span></div>
+    <div id="clicks">Cards Turned: <span id="rotate-count"> -- </span></div>
+    <div id="win" class="winner none">You are the next Dumbledore</div>
+    <div id="lose" class="lose none">You are forced to join with Voldemort</div>
+
+    <div id="board">
+    <div id="sky">
+   <div id="flyingHarry"></div>
+    </div>
+      <div class="card" data-colours="red">
         <div class="bcard"></div>
         <div class="fcard">1</div>
-    </div>
-        <div class="card" data-colours="red">
+      </div>
+      <div class="card" data-colours="red">
         <div class="bcard"></div>
         <div class="fcard">1</div>
-    </div>
-        <div class="card" data-colours="blue">
+      </div>
+      <div class="card" data-colours="blue">
         <div class="bcard"></div>
         <div class="fcard">2</div>
-    </div>
-        <div class="card" data-colours="blue">
+      </div>
+      <div class="card" data-colours="blue">
         <div class="bcard"></div>
         <div class="fcard">2</div>
-    </div>
-        <div class="card" data-colours="green">
+      </div>
+      <div class="card" data-colours="green">
         <div class="bcard"></div>
         <div class="fcard">3</div>
-    </div>
-        <div class="card" data-colours="green">
+      </div>
+      <div class="card" data-colours="green">
         <div class="bcard"></div>
-        <div class="fcard">3</div>
-    </div>
-        <div class="card" data-colours="yellow">
-        <div class="bcard"></div>
-        <div class="fcard">4</div>
-    </div>
-        <div class="card" data-colours="yellow">
+        <div class="fcard"></div>
+      </div>
+      <div class="card" data-colours="yellow">
         <div class="bcard"></div>
         <div class="fcard">4</div>
-    </div>
-        <div class="card" data-colours="purple">
+      </div>
+      <div class="card" data-colours="yellow">
+        <div class="bcard"></div>
+        <div class="fcard">4</div>
+      </div>
+      <div class="card" data-colours="purple">
         <div class="bcard"></div>
         <div class="fcard">5</div>
-    </div>
-        <div class="card" data-colours="purple">
+      </div>
+      <div class="card" data-colours="purple">
         <div class="bcard"></div>
         <div class="fcard">5</div>
-    </div>
-        <div class="card" data-colours="black">
+      </div>
+      <div class="card" data-colours="black">
         <div class="bcard"></div>
         <div class="fcard">6</div>
-    </div>
-        <div class="card" data-colours="black">
+      </div>
+      <div class="card" data-colours="black">
         <div class="bcard"></div>
         <div class="fcard">6</div>
-    </div>
-        <div class="card" data-colours="white">
+      </div>
+      <div class="card" data-colours="white">
         <div class="bcard"></div>
         <div class="fcard">7</div>
-    </div>
-        <div class="card" data-colours="white">
+      </div>
+      <div class="card" data-colours="white">
         <div class="bcard"></div>
         <div class="fcard">7</div>
-    </div>
-        <div class="card" data-colours="grey">
+      </div>
+      <div class="card" data-colours="grey">
         <div class="bcard"></div>
         <div class="fcard">8</div>
-    </div>
-        <div class="card" data-colours="grey">
+      </div>
+      <div class="card" data-colours="grey">
         <div class="bcard"></div>
         <div class="fcard">8</div>
+      </div>
     </div>
-</div>
 
-<script src="assets/js/game.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-</body>
+    <script src="assets/js/game.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </body>
 </html>
-

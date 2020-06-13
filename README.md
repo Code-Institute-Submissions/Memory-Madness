@@ -44,3 +44,13 @@
 
 ## Background: 
 # The background image, card back image and front card images are all sourced from royalty free websites.
+
+
+
+
+
+
+Harry potter images from Clipart library
+Hogwarts hall backdrop from https://harrypotter.fandom.com/
+
+https://www.codesdope.com/blog/article/css3-moving-cloud-animation-with-airplane/

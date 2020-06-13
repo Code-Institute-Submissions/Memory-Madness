@@ -1,3 +1,5 @@
+
+
 * {
     padding:0;
     margin: 0;
@@ -7,17 +9,58 @@
 #game-screen {
     height: 100vh;
     width: 100vw;
+    background-image: url("../images/hogwarts-backdrop.jpg");
+    justify-content: center;
+}
+
+.title {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 75px;
+}
+
+.message {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 40px;
 }
 
 
 #board {
-    height: 50%;
-    width: 50%;
+    height: 65%;
+    width: 55%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.start-btn {
+    margin: 10px auto;
+    height: 50px;
+    width: 180px;
+    border-radius: 15px;
+    border: none;
+}
+
+#start-easy {
+    font-size: 30px;
+}
+#start-medium {
+    font-size: 30px;
+}
+#start-hard {
+    font-size: 30px;
+}
+#start-extrahard {
+    font-size: 30px;
+}
 
 
 /*---------------------------------------------------------------card*/
@@ -27,9 +70,9 @@
 }
 
 .card {
-    height: 210px;
-    width: 130px;
-    margin: 10px 32px;
+    height: 170px;
+    width: 120px;
+    margin: 20px 32px;
     position: relative;
     transform-style: preserve-3d;
     transition: 1.0s;
@@ -47,6 +90,15 @@
 .fcard {
     transform: rotateY(180deg);
 }
+
+/*.harry {
+    position:relative;
+    background: url("../images/harry.jpg");
+    height: 10%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+}*/
 
 .card.rotate {
     transition: transform 1.0s;
@@ -130,14 +182,219 @@
     color: purple;
 }
 
+/*---------------------------------------------------------------images*/
+
+.bcard.gryf {
+    background: url("../images/gryf.png");
+    height: 70%;
+    width:70%;
+}
+.bcard.slyth {
+    background: url("../images/slyth.png");
+    height: 70%;
+    width:70%;
+}
+.bcard.huff {
+    background: url("../images/huff.png");
+    height: 70%;
+    width:70%;
+}
+.bcard.rave {
+    background: url("../images/rave.png");
+    height: 70%;
+    width:70%;
+}
+
 /*---------------------------------------------------------------colours*/
 
 .bcard {
-    background-color: blue;
+    background-color: green;
 }
 
 .fcard {
-    background-color: red;
+    background-color: white;
 }
 
 
+
+
+#start-easy {
+    background-color: #9c1203;
+    color: #e3a000;
+}
+#start-medium {
+    background-color: #2d004d;
+    color: #e3a000;
+}
+#start-hard {
+    background-color: #033807;
+    color: #e3a000;
+}
+#start-extrahard {
+    background-color: #00165e;
+    color: #e3a000;
+}
+
+.title {
+    color: #e3a000;
+}
+
+.message {
+    color: #e3a000;
+}
+
+#9c1203 red
+
+#e3a000 yellow
+
+#033807 green
+
+#00165e blue
+
+#2d004d purple
+
+/*@media screen and (min-width: 579px) {
+    
+.card {
+    height: 100px;
+    width: 66px;
+}
+
+.start-btn {
+    margin: 10px 10px;
+    height: 40px;
+    width: 150px;
+}
+
+#start-easy {
+    font-size: 20px;
+}
+
+#start-medium {
+    font-size: 20px;
+}
+
+#start-hard {
+    font-size: 20px;
+}
+
+#start-extrahard {
+    font-size: 20px;
+}*/
+
+#sky {
+    position: relative;
+    height: 150%;
+    width: 150%;
+}
+
+#flyingHarry {
+    position: absolute;
+    background-image: url('../images/harryfly.png');
+    background-repeat: no-repeat;
+    background-size: 90%;
+    width: 200px;
+    height: 300px;
+    -webkit-animation: movingplane 10s linear infinite;
+    -moz-animation: movingplane 10s linear infinite;
+    -o-animation: movingplane 10s linear infinite;
+}
+
+#dementor {
+    position: absolute;
+    background-image: url('../images/Creature_2.png');
+    background-repeat: no-repeat;
+    background-size: 90%;
+    width: 200px;
+    height: 300px;
+    -webkit-animation: movingplane 10s linear infinite;
+    -moz-animation: movingplane 10s linear infinite;
+    -o-animation: movingplane 10s linear infinite;
+}
+
+@keyframes movingplane {
+	0% { 
+        margin-left: 100%;
+        top:300px;
+    }
+    29% { 
+        margin-left: 50%; 
+        top: 50px; 
+        -webkit-transform: rotate(20deg);
+	    -moz-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+	    transform: rotate(20deg);
+    }
+    31% {
+        -webkit-transform: rotate(-20deg);
+	    -moz-transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+	    transform: rotate(-20deg);
+    }
+    60% {
+        margin-left: 0%; 
+        top: 300px;    
+    }
+    100% {
+        margin-left: -100%;
+        top: 300px;
+    }
+}
+
+@-webkit-keyframes movingplane {
+	0% { 
+        margin-left: 100%;
+        top:300px;
+    }
+    29% { 
+        margin-left: 50%; 
+        top: 50px; 
+        -webkit-transform: rotate(20deg);
+	    -moz-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+	    transform: rotate(20deg);
+    }
+    31% {
+        -webkit-transform: rotate(-20deg);
+	    -moz-transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+	    transform: rotate(-20deg);
+    }
+    60% {
+        margin-left: 0%; 
+        top: 300px;    
+    }
+    100% {
+        margin-left: -100%;
+        top: 300px;
+    }
+}
+
+@-moz-keyframes movingplane {
+	0% { 
+        margin-left: 100%;
+        top:300px;
+    }
+    29% { 
+        margin-left: 50%; 
+        top: 50px; 
+        -webkit-transform: rotate(20deg);
+	    -moz-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+	    transform: rotate(20deg);
+    }
+    31% {
+        -webkit-transform: rotate(-20deg);
+	    -moz-transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+	    transform: rotate(-20deg);
+    }
+    60% {
+        margin-left: 0%; 
+        top: 300px;    
+    }
+    100% {
+        margin-left: -100%;
+        top: 300px;
+    }
+}
