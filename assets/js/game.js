@@ -1,35 +1,63 @@
-console.log("Hello");
-
 const cards = document.querySelectorAll(".card");
+const cardreset = document.querySelectorAll(".card");
 const button1 = document.getElementById("start-easy");
 const button2 = document.getElementById("start-medium");
 const button3 = document.getElementById("start-hard");
 const button4 = document.getElementById("start-extrahard");
+const button5 = document.getElementById("reset");
 const gameboard = document.getElementById("board");
+const bcards = document.getElementsByClassName("bcard");
 let clicks = 1;
 let firstcard;
 let secondcard;
+//let badgeImg = "";
+let allCards = false;
 let isFirstCard = false;
-const cardMatchArray = [];
+let cardMatchArray = [];
 /*---------------------------------------------------------------start*/
 
-// reset card face
-
-// reset flip count
-
-// reset time
-
-// shuffle cards
-
-shufflecards();
+/*function cardLock() {
+cards.forEach(function(card) {
+  card.removeEventListener("click", clicker);
+});}*/
 
 
+button5.addEventListener("click", resetGame);
+    function resetGame() {
+    button1.addEventListener("click", timerEasy);
+    document.getElementById("win").classList.add("none");
+    document.getElementById("lose").classList.add("none");
+    document.getElementById("time").innerHTML = "Good Luck";
+    document.getElementById("rotate-count").innerHTML = "Ready";
+ 
+
+    cardMatchArray = [];
+  button1.addEventListener("click", timerEasy);
+  button2.addEventListener("click", timerMedium);
+  button3.addEventListener("click", timerHard);
+  button4.addEventListener("click", timerExtraHard);
+}
+
+
+
+// remove flying image
+
+//remove bcard face
+
+
+
+//shufflecards();
+
+
+/*function cardLock() {
+if (allCards === false) return;}*/
 /*---------------------------------------------------------------timer*/
 
 button1.addEventListener("click", timerEasy);
 function timerEasy() {
-  let time = 50;
-  setInterval(function () {
+
+    let time = 10;
+    setInterval(function() {
     let remtime = time--;
     if (remtime >= 0) {
       countdown = document.getElementById("time");
@@ -37,6 +65,75 @@ function timerEasy() {
       console.log("clicked timer easy");
     }
   if (cardMatchArray.length === 16 && remtime > 0) {
+      clearInterval(time);
+    document.getElementById("win").classList.remove("none");
+    document.getElementById("time").innerHTML = "Winner";
+    clearInterval;
+    console.log("winner");
+}
+
+    if (cardMatchArray.length !== 16 && remtime === 0) {
+    document.getElementById("lose").classList.remove("none");
+    console.log("lose");
+      clearInterval(time);
+    }
+  }, 1000);
+  button1.removeEventListener("click", timerEasy);
+  button2.removeEventListener("click", timerMedium);
+  button3.removeEventListener("click", timerHard);
+  button4.removeEventListener("click", timerExtraHard);
+
+  cards.forEach(function(card) {
+  card.addEventListener("click", clicker);
+});
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+
+
+
+button2.addEventListener("click", timerMedium);
+function timerMedium() {
+  let time = 90;
+  setInterval(function() {
+    let remtime = time--;
+    if (remtime >= 0) {
+      countdown = document.getElementById("time");
+      countdown.innerText = remtime;
+      console.log("clicked timer medium");
+    }
+if (cardMatchArray.length === 16 && remtime > 0) {
+    document.getElementById("win").classList.remove("none");
+    clearInterval(time);
+    document.getElementById("time").innerHTML = "Winner";
+    console.log("winner");
+clearInterval(time);}
+    
+
+    if (remtime === 0) {
+    document.getElementById("lose").classList.remove("none");
+    console.log("lose");
+      clearInterval(time);
+    }
+  }, 1000);
+  button1.removeEventListener("click", timerEasy);
+  button2.removeEventListener("click", timerMedium);
+  button3.removeEventListener("click", timerHard);
+  button4.removeEventListener("click", timerExtraHard);
+}
+
+button3.addEventListener("click", timerHard);
+function timerHard() {
+  let time = 60;
+  setInterval(function() {
+    let remtime = time--;
+    if (remtime >= 0) {
+      countdown = document.getElementById("time");
+      countdown.innerText = remtime;
+      console.log("clicked timer hard");
+    }
+if (cardMatchArray.length === 16 && remtime > 0) {
     document.getElementById("win").classList.remove("none");
     clearInterval(time);
     document.getElementById("time").innerHTML = "Winner";
@@ -54,69 +151,25 @@ function timerEasy() {
   button4.removeEventListener("click", timerExtraHard);
 }
 
-button2.addEventListener("click", timerMedium);
-function timerMedium() {
-  let time = 90;
-  setInterval(function () {
-    let remtime = time--;
-    if (remtime >= 0) {
-      countdown = document.getElementById("time");
-      countdown.innerText = remtime;
-      console.log("clicked timer medium");
-    }
-      if (cardMatchArray.length === 16 && remtime > 0) {
-    document.getElementById("win").classList.remove("none");
-    console.log("winner");}
-    if (remtime === 0) {
-      alert("sorry, out of time");
-      clearInterval(time);
-    }
-  }, 1000);
-  button1.removeEventListener("click", timerEasy);
-  button2.removeEventListener("click", timerMedium);
-  button3.removeEventListener("click", timerHard);
-  button4.removeEventListener("click", timerExtraHard);
-}
-
-button3.addEventListener("click", timerHard);
-function timerHard() {
-  let time = 60;
-  setInterval(function () {
-    let remtime = time--;
-    if (remtime >= 0) {
-      countdown = document.getElementById("time");
-      countdown.innerText = remtime;
-      console.log("clicked timer hard");
-    }
-      if (cardMatchArray.length === 16 && remtime > 0) {
-    document.getElementById("win").classList.remove("none");
-    console.log("winner");}
-    if (remtime === 0) {
-      alert("sorry, out of time");
-      clearInterval(time);
-    }
-  }, 1000);
-  button1.removeEventListener("click", timerEasy);
-  button2.removeEventListener("click", timerMedium);
-  button3.removeEventListener("click", timerHard);
-  button4.removeEventListener("click", timerExtraHard);
-}
-
 button4.addEventListener("click", timerExtraHard);
 function timerExtraHard() {
   let time = 30;
-  setInterval(function () {
+  setInterval(function() {
     let remtime = time--;
     if (remtime >= 0) {
       countdown = document.getElementById("time");
       countdown.innerText = remtime;
       console.log("clicked timer extrahard");
     }
-      if (cardMatchArray.length === 16 && remtime > 0) {
+if (cardMatchArray.length === 16 && remtime > 0) {
     document.getElementById("win").classList.remove("none");
+    clearInterval(time);
+    document.getElementById("time").innerHTML = "Winner";
     console.log("winner");}
+
     if (remtime === 0) {
-      alert("sorry, out of time");
+    document.getElementById("lose").classList.remove("none");
+    console.log("lose");
       clearInterval(time);
     }
   }, 1000);
@@ -146,21 +199,24 @@ function turn() {
 
     console.log("second card");
 
+
     if (firstcard.dataset.colours === secondcard.dataset.colours) {
       firstcard.removeEventListener("click", turn);
       secondcard.removeEventListener("click", turn);
-      setTimeout(function () {
+      resetBoard();
+  /*    setTimeout(function() {
         firstcard.classList.add("fade-out");
         secondcard.classList.add("fade-out");
-      }, 800);
+      }, 800);*/
             console.log("Function fired");
       cardMatchArray.push("firstcard");
       cardMatchArray.push("secondcard");
       console.log(cardMatchArray);
     } else {
-      setTimeout(function () {
+      setTimeout(function() {
         firstcard.classList.remove("rotate");
         secondcard.classList.remove("rotate");
+        resetBoard();
       }, 800);
     }
   }
@@ -168,10 +224,11 @@ function turn() {
 
 /*---------------------------------------------------------------count cards clicked*/
 
-cards.forEach(function (card) {
+cards.forEach(function(card) {
   card.addEventListener("click", clicker);
 });
 function clicker() {
+    let clicksAdd = 0;
   clicksAdd = clicks++;
   let countAdd = document.getElementById("rotate-count");
   countAdd.innerText = clicksAdd;
@@ -205,3 +262,29 @@ function shufflecards() {
     console.log("winner");
   }
 }*/
+
+function resetBoard() {
+    firstcard = null;
+    secondcard = null;
+    isFirstCard = false;
+}
+
+/*cards.forEach(function (card) {
+  card.addEventListener("click", wandSound);
+});
+function wandSound() {
+    let sound = new Audio("../sound/wand.mp3");
+    sound.play;
+}*/
+
+
+/*button1.addEventListener("click", badgeChange);
+function badgeChange() {
+    if(button1) {
+    let badgeImg = document.querySelectorAll(".card > .bcard");
+    badgeImg.classList.add("huff");
+    console.log("badge");
+    };
+    }*/
+
+

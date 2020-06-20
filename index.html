@@ -16,16 +16,17 @@
     <title>Hogwarts Memory Madness</title>
   </head>
   <h1 class="title">Hogwarts Memory Madness</h1>
-    <h3 class="message">
-      Welcome to Hogwarts Memory Madness. Draw on all the magical powers of
-      Hogwarts to match the cards and beat the clock.
-    </h3>
+  <h3 class="message">
+    Welcome to Hogwarts Memory Madness. Draw on all the magical powers of
+    Hogwarts to match the cards and beat the clock.
+  </h3>
   <body id="game-screen">
     <div class="buttons">
       <button id="start-easy" class="start-btn">Easy</button>
       <button id="start-medium" class="start-btn">Medium</button>
       <button id="start-hard" class="start-btn">Hard</button>
-      <button id="start-extrahard" class="start-btn">Expelliarmus</button>
+      <button id="start-extrahard" class="start-btn">Extra Hard</button>
+      <button id="reset" class="reset-btn">Reset Game</button>
     </div>
 
     <div id="countdown">Time: <span id="time"> --- </span></div>
@@ -34,72 +35,72 @@
     <div id="lose" class="lose none">You are forced to join with Voldemort</div>
 
     <div id="board">
-    <div id="sky">
-   <div id="flyingHarry"></div>
-    </div>
-      <div class="card" data-colours="red">
+      <!--<div id="sky">-->
+      <div id="flyingHarry"></div>
+      <!--</div>-->
+      <div class="card" data-colours="1">
         <div class="bcard"></div>
-        <div class="fcard">1</div>
+        <div class="fcard harry"></div>
       </div>
-      <div class="card" data-colours="red">
+      <div class="card" data-colours="1">
         <div class="bcard"></div>
-        <div class="fcard">1</div>
+        <div class="fcard harry"></div>
       </div>
-      <div class="card" data-colours="blue">
+      <div class="card" data-colours="2">
         <div class="bcard"></div>
-        <div class="fcard">2</div>
+        <div class="fcard hermione"></div>
       </div>
-      <div class="card" data-colours="blue">
+      <div class="card" data-colours="2">
         <div class="bcard"></div>
-        <div class="fcard">2</div>
+        <div class="fcard hermione"></div>
       </div>
-      <div class="card" data-colours="green">
+      <div class="card" data-colours="3">
         <div class="bcard"></div>
-        <div class="fcard">3</div>
+        <div class="fcard hagrid"></div>
       </div>
-      <div class="card" data-colours="green">
+      <div class="card" data-colours="3">
         <div class="bcard"></div>
-        <div class="fcard"></div>
+        <div class="fcard hagrid"></div>
       </div>
-      <div class="card" data-colours="yellow">
+      <div class="card" data-colours="4">
         <div class="bcard"></div>
-        <div class="fcard">4</div>
+        <div class="fcard Creature_1"></div>
       </div>
-      <div class="card" data-colours="yellow">
+      <div class="card" data-colours="4">
         <div class="bcard"></div>
-        <div class="fcard">4</div>
+        <div class="fcard Creature_1"></div>
       </div>
-      <div class="card" data-colours="purple">
+      <div class="card" data-colours="5">
         <div class="bcard"></div>
-        <div class="fcard">5</div>
+        <div class="fcard owl"></div>
       </div>
-      <div class="card" data-colours="purple">
+      <div class="card" data-colours="5">
         <div class="bcard"></div>
-        <div class="fcard">5</div>
+        <div class="fcard owl"></div>
       </div>
-      <div class="card" data-colours="black">
+      <div class="card" data-colours="6">
         <div class="bcard"></div>
-        <div class="fcard">6</div>
+        <div class="fcard Creature_4"></div>
       </div>
-      <div class="card" data-colours="black">
+      <div class="card" data-colours="6">
         <div class="bcard"></div>
-        <div class="fcard">6</div>
+        <div class="fcard Creature_4"></div>
       </div>
-      <div class="card" data-colours="white">
+      <div class="card" data-colours="7">
         <div class="bcard"></div>
-        <div class="fcard">7</div>
+        <div class="fcard station"></div>
       </div>
-      <div class="card" data-colours="white">
+      <div class="card" data-colours="7">
         <div class="bcard"></div>
-        <div class="fcard">7</div>
+        <div class="fcard station"></div>
       </div>
-      <div class="card" data-colours="grey">
+      <div class="card" data-colours="8">
         <div class="bcard"></div>
-        <div class="fcard">8</div>
+        <div class="fcard snitch"></div>
       </div>
-      <div class="card" data-colours="grey">
+      <div class="card" data-colours="8">
         <div class="bcard"></div>
-        <div class="fcard">8</div>
+        <div class="fcard snitch"></div>
       </div>
     </div>
 
