@@ -16,7 +16,7 @@ let allCards = false;
 let isFirstCard = false;
 let cardMatchArray = [];
 
-/*---------------------------------------------------------------start*/
+//start
 
 /*function cardLock() {
 cards.forEach(function(card) {
@@ -34,6 +34,7 @@ button5.addEventListener("click", resetGame);
     document.getElementById("flying").classList.remove("flyingHarry");
     document.getElementById("flying").classList.remove("dementor");
     cardMatchArray = [];
+    //shufflecards();
     let clickAdd = 0;
 
     isFirstCard = false;
@@ -54,13 +55,11 @@ button5.addEventListener("click", resetGame);
   button3.addEventListener("click", timerHard);
   button4.addEventListener("click", timerExtraHard);
 }
-/*$(".reset").click(function() {
-    document.location.reload(true);
-});*/
 
-//shufflecards();
 
-/*---------------------------------------------------------------timer*/
+
+
+//timer
 
 button1.addEventListener("click", timerEasy);
 function timerEasy() {
@@ -193,7 +192,7 @@ if (cardMatchArray.length === 16 && remtime > 0) {
   button4.removeEventListener("click", timerExtraHard);
 }
 
-/*---------------------------------------------------------------turning / matching cards*/
+//turning / matching cards
 
 cards.forEach(function (card) {
   card.addEventListener("click", turn);
@@ -201,7 +200,7 @@ cards.forEach(function (card) {
 
 function turn() {
   if (this === firstcard)
-    return; /* Code for blocking double click taken from youtube freeCodeCamp.org*/
+    return;
   this.classList.add("rotate");
   if (!isFirstCard) {
     isFirstCard = true;
@@ -217,6 +216,7 @@ function turn() {
     if (firstcard.dataset.colours === secondcard.dataset.colours) {
       firstcard.removeEventListener("click", turn);
       secondcard.removeEventListener("click", turn);
+      playWand();
       resetBoard();
       cardMatchArray.push("firstcard");
       cardMatchArray.push("secondcard");
@@ -231,8 +231,7 @@ function turn() {
   }
 }
 
-/*---------------------------------------------------------------count cards clicked*/
-
+//count cards clicked
 
 cards.forEach(function(card) {
   card.addEventListener("click", clicker);
@@ -246,7 +245,7 @@ function clicker() {
   console.log("clicks counted");
 }
 
-/*---------------------------------------------------------------shuffle cards----taken from youtube channel*/
+//shuffle cards----taken from youtube channel
 //
 function shufflecards() {
   cards.forEach(function (card) {
@@ -256,7 +255,7 @@ function shufflecards() {
   console.log("Shuffle cards");
 }
 
-/*---------------------------------------------------------------Game Over*/
+//Game Over
 
 /*function gameOver() {
       if (remtime === 0) {
@@ -266,7 +265,7 @@ function shufflecards() {
 }
 }*/
 
-/*---------------------------------------------------------------Win*/
+//Win
 /*function win() {
   if (cardMatchArray.length === 16 && remtime > 0) {
     document.getElementById("win").classList.remove("none");
@@ -274,20 +273,18 @@ function shufflecards() {
   }
 }*/
 
+//Sound
+
 function resetBoard() {
     firstcard = null;
     secondcard = null;
     isFirstCard = false;
 }
 
-
-/*button1.addEventListener("click", badgeChange);
-function badgeChange() {
-    if(button1) {
-    let badgeImg = document.querySelectorAll(".card > .bcard");
-    badgeImg.classList.add("huff");
-    console.log("badge");
-    };
-    }*/
+function playWand() {
+    let wand = new Audio("assets/sound/wand.wav");
+    wand.play();
+    console.log("sound");
+}
 
 
