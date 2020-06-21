@@ -26,6 +26,13 @@
     padding: 20px;
 }
 
+.info {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
 #countdown {
     text-align: center;
     font-size: 40px;
@@ -126,7 +133,6 @@
     background-size: 50%;
     backface-visibility: hidden;
     border-radius: 12px;
-
 }
 
 .harry {
@@ -174,11 +180,6 @@
     transform: rotateY(180deg);
 }
 
-
-
-
-
-
 /*---------------------------------------------------------------win*/
 
 .winner.none {
@@ -216,7 +217,7 @@
         background-color: white;
 }
 .bcard.huff {
-    background: url("../images/huff.png") center no-repeat;
+    background: url("../images/huff.png");
     background-size: 100%;
     background-color: white;
 }
@@ -226,100 +227,13 @@
     background-color: white;
 }
 
-/*---------------------------------------------------------------colours*/
-
-#countdown {
-    color: #e3a000;
-}
-
-#clicks {
-    color: #e3a000;
-}
-
-.fcard {
-    background-color: white;
-}
-
-#start-easy {
-    background-color: #9c1203;
-    color: #e3a000;
-}
-#start-medium {
-    background-color: #2d004d;
-    color: #e3a000;
-}
-#start-hard {
-    background-color: #033807;
-    color: #e3a000;
-}
-#start-extrahard {
-    background-color: #00165e;
-    color: #e3a000;
-}
-
-#reset {
-    background-color: #e3a000;
-    color: #00165e;
-}
-
-.title {
-    color: #e3a000;
-}
-
-.message {
-    color: #e3a000;
-}
-
-#9c1203 red
-
-#e3a000 yellow
-
-#033807 green
-
-#00165e blue
-
-#2d004d purple
-
-/*@media screen and (min-width: 579px) {
-    
-.card {
-    height: 100px;
-    width: 66px;
-}
-
-.start-btn {
-    margin: 10px 10px;
-    height: 40px;
-    width: 150px;
-}
-
-#start-easy {
-    font-size: 20px;
-}
-
-#start-medium {
-    font-size: 20px;
-}
-
-#start-hard {
-    font-size: 20px;
-}
-
-#start-extrahard {
-    font-size: 20px;
-}*/
-
-#sky {
-    position: relative;
-    height: 150%;
-    width: 150%;
-}
+/*---------------------------------------------------------------win lose animation*/
 
 .flyingHarry {
     position: absolute;
     background-image: url('../images/harryfly.png');
     background-repeat: no-repeat;
-    background-size: 90%;
+    background-size: 100%;
     width: 200px;
     height: 300px;
     -webkit-animation: moving 10s linear infinite;
@@ -331,7 +245,7 @@
     position: absolute;
     background-image: url('../images/Creature_2.png');
     background-repeat: no-repeat;
-    background-size: 90%;
+    background-size: 100%;
     width: 200px;
     height: 300px;
     -webkit-animation: moving 10s linear infinite;
@@ -424,4 +338,158 @@
         margin-left: -100%;
         top: 400px;
     }
+}
+
+/*---------------------------------------------------------------colours*/
+
+#countdown {
+    color: #e3a000;
+}
+
+#clicks {
+    color: #e3a000;
+}
+
+.fcard {
+    background-color: white;
+}
+
+#start-easy {
+    background-color: #9c1203;
+    color: #e3a000;
+}
+#start-medium {
+    background-color: #2d004d;
+    color: #e3a000;
+}
+#start-hard {
+    background-color: #033807;
+    color: #e3a000;
+}
+#start-extrahard {
+    background-color: #00165e;
+    color: #e3a000;
+}
+
+#reset {
+    background-color: #e3a000;
+    color: #00165e;
+}
+
+.title {
+    color: #e3a000;
+}
+
+.message {
+    color: #e3a000;
+}
+
+.info {
+ color: #e3a000;
+}
+
+.winner {
+    color: #e3a000;
+}
+
+.lose {
+    color:#9c1203;
+}
+
+
+/*@media screen and (min-width: 579px) {
+    
+.card {
+    height: 100px;
+    width: 66px;
+}
+
+.start-btn {
+    margin: 10px 10px;
+    height: 40px;
+    width: 150px;
+}
+
+#start-easy {
+    font-size: 20px;
+}
+
+#start-medium {
+    font-size: 20px;
+}
+
+#start-hard {
+    font-size: 20px;
+}
+
+#start-extrahard {
+    font-size: 20px;
+}*/
+
+
+@media only screen and (max-width: 741px) {
+    
+.card {
+    height: 125px;
+    width: 85px;
+}
+
+.start-btn {
+    margin: 10px 5px;
+    height: 40px;
+    width: 140px;
+}
+
+#start-easy {
+    font-size: 20px;
+}
+
+#start-medium {
+    font-size: 20px;
+}
+
+#start-hard {
+    font-size: 20px;
+}
+
+#start-extrahard {
+    font-size: 20px;
+}
+
+.title {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.message {
+    margin: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.info {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 200;
+    margin-bottom: 5px;
+}
+
+#countdown {
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+}
+
+#clicks {
+    text-align: center;
+    font-size: 25px;
+    padding:10px;
+}
+
+#board {
+    width: 90%;
+    margin: 20px auto;
+}
 }
