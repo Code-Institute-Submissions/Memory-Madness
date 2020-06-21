@@ -20,16 +20,29 @@
 }
 
 .message {
-    margin-top: 20px;
+    margin: 20px 30px;
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+}
+
+#countdown {
     text-align: center;
     font-size: 40px;
+    padding: 20px;
+}
+
+#clicks {
+    text-align: center;
+    font-size: 40px;
+    padding:20px;
 }
 
 
 #board {
-    height: 65%;
-    width: 55%;
-    margin: auto;
+    height: 70%;
+    width: 80%;
+    margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -42,6 +55,14 @@
 }
 
 .start-btn {
+    margin: 10px auto;
+    height: 50px;
+    width: 180px;
+    border-radius: 15px;
+    border: none;
+}
+
+.reset-btn {
     margin: 10px auto;
     height: 50px;
     width: 180px;
@@ -62,7 +83,9 @@
     font-size: 30px;
 }
 
-
+#reset {
+    font-size: 30px;
+}
 /*---------------------------------------------------------------card*/
 
 .card.none {
@@ -77,6 +100,8 @@
     transform-style: preserve-3d;
     transition: 1.0s;
     border: none;
+    background-color: transparent;
+
 }
 
 .bcard, .fcard {
@@ -91,14 +116,58 @@
     transform: rotateY(180deg);
 }
 
-/*.harry {
-    position:relative;
-    background: url("../images/harry.jpg");
-    height: 10%;
-    width: 10%;
-    display: flex;
-    justify-content: center;
-}*/
+.bcard {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    border: 3px solid #9c1203;
+    background: url("../images/crest.jpg") center;
+    background-size: 50%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+
+}
+
+.harry {
+    background: url("../images/harry.jpg") center no-repeat;
+    background-size: 50%
+}
+
+.hermione {
+    background: url("../images/hermione.jpg") center no-repeat;
+    background-size: 50%
+}
+
+.hagrid {
+    background: url("../images/hagrid.jpg") center no-repeat;
+    background-size: 70%
+}
+
+.Creature_1 {
+    background: url("../images/Creature_1.png") center no-repeat;
+    background-size: 95%
+}
+
+.owl {
+    background: url("../images/owl.gif") center no-repeat;
+    background-size: 100%
+}
+
+.Creature_4 {
+    background: url("../images/Creature_4.png") center no-repeat;
+    background-size: 85%
+}
+
+.station {
+    background: url("../images/station.jpg") center no-repeat;
+    background-size: 85%
+}
+
+.snitch {
+    background: url("../images/snitch.jpg") center no-repeat;
+    background-size: 80%
+}
 
 .card.rotate {
     transition: transform 1.0s;
@@ -169,6 +238,7 @@
 .winner {
     font-size: 100px;
     color: orange;
+    text-align: center;
 }
 
 /*---------------------------------------------------------------lose*/
@@ -180,36 +250,44 @@
 .lose {
     font-size: 100px;
     color: purple;
+    text-align: center;
 }
 
 /*---------------------------------------------------------------images*/
 
 .bcard.gryf {
-    background: url("../images/gryf.png");
-    height: 70%;
-    width:70%;
+    background: url("../images/gryf.png") center no-repeat;
+    background-size: 100%;
+        background-color: white;
 }
 .bcard.slyth {
-    background: url("../images/slyth.png");
-    height: 70%;
-    width:70%;
+    background: url("../images/slyth.png") center no-repeat;
+    background-size: 100%;
+        background-color: white;
 }
 .bcard.huff {
-    background: url("../images/huff.png");
-    height: 70%;
-    width:70%;
+    background: url("../images/huff.png") center no-repeat;
+    background-size: 100%;
+    background-color: white;
 }
 .bcard.rave {
-    background: url("../images/rave.png");
-    height: 70%;
-    width:70%;
+    background: url("../images/rave.png") center no-repeat;
+    background-size: 100%;
+    background-color: white;
 }
 
 /*---------------------------------------------------------------colours*/
 
-.bcard {
-    background-color: green;
+#countdown {
+    color: #e3a000;
 }
+
+#clicks {
+    color: #e3a000;
+}
+
+
+
 
 .fcard {
     background-color: white;
@@ -233,6 +311,11 @@
 #start-extrahard {
     background-color: #00165e;
     color: #e3a000;
+}
+
+#reset {
+    background-color: #e3a000;
+    color: #00165e;
 }
 
 .title {
@@ -295,9 +378,9 @@
     background-size: 90%;
     width: 200px;
     height: 300px;
-    -webkit-animation: movingplane 10s linear infinite;
-    -moz-animation: movingplane 10s linear infinite;
-    -o-animation: movingplane 10s linear infinite;
+    -webkit-animation: moving 10s linear infinite;
+    -moz-animation: moving 10s linear infinite;
+    -o-animation: moving 10s linear infinite;
 }
 
 #dementor {
@@ -307,15 +390,15 @@
     background-size: 90%;
     width: 200px;
     height: 300px;
-    -webkit-animation: movingplane 10s linear infinite;
-    -moz-animation: movingplane 10s linear infinite;
-    -o-animation: movingplane 10s linear infinite;
+    -webkit-animation: moving 10s linear infinite;
+    -moz-animation: moving 10s linear infinite;
+    -o-animation: moving 10s linear infinite;
 }
 
-@keyframes movingplane {
+@keyframes moving {
 	0% { 
         margin-left: 100%;
-        top:300px;
+        top:400px;
     }
     29% { 
         margin-left: 50%; 
@@ -333,18 +416,18 @@
     }
     60% {
         margin-left: 0%; 
-        top: 300px;    
+        top: 400px;    
     }
     100% {
         margin-left: -100%;
-        top: 300px;
+        top: 400px;
     }
 }
 
-@-webkit-keyframes movingplane {
+@-webkit-keyframes moving {
 	0% { 
         margin-left: 100%;
-        top:300px;
+        top:400px;
     }
     29% { 
         margin-left: 50%; 
@@ -362,18 +445,18 @@
     }
     60% {
         margin-left: 0%; 
-        top: 300px;    
+        top: 400px;    
     }
     100% {
         margin-left: -100%;
-        top: 300px;
+        top: 400px;
     }
 }
 
-@-moz-keyframes movingplane {
+@-moz-keyframes moving {
 	0% { 
         margin-left: 100%;
-        top:300px;
+        top:400px;
     }
     29% { 
         margin-left: 50%; 
@@ -391,10 +474,10 @@
     }
     60% {
         margin-left: 0%; 
-        top: 300px;    
+        top: 400px;    
     }
     100% {
         margin-left: -100%;
-        top: 300px;
+        top: 400px;
     }
 }

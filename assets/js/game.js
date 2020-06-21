@@ -10,10 +10,12 @@ const bcards = document.getElementsByClassName("bcard");
 let clicks = 1;
 let firstcard;
 let secondcard;
+let card;
 //let badgeImg = "";
 let allCards = false;
 let isFirstCard = false;
 let cardMatchArray = [];
+
 /*---------------------------------------------------------------start*/
 
 /*function cardLock() {
@@ -29,33 +31,38 @@ button5.addEventListener("click", resetGame);
     document.getElementById("lose").classList.add("none");
     document.getElementById("time").innerHTML = "Good Luck";
     document.getElementById("rotate-count").innerHTML = "Ready";
- 
-
     cardMatchArray = [];
+    let clickAdd = 0;
+
+    isFirstCard = false;
+    secondcard = null;
+
+    cards.forEach(function (card) {
+    card.addEventListener("click", turn);
+    });
+    cards.forEach(function (card) {
+    card.addEventListener("click", clicker);
+    });
+
+    $("div").removeClass("rotate");
+ 
+    
   button1.addEventListener("click", timerEasy);
   button2.addEventListener("click", timerMedium);
   button3.addEventListener("click", timerHard);
   button4.addEventListener("click", timerExtraHard);
 }
-
-
-
-// remove flying image
-
-//remove bcard face
-
-
+/*$(".reset").click(function() {
+    document.location.reload(true);
+});*/
 
 //shufflecards();
 
-
-/*function cardLock() {
-if (allCards === false) return;}*/
 /*---------------------------------------------------------------timer*/
 
 button1.addEventListener("click", timerEasy);
 function timerEasy() {
-
+    resetGame();
     let time = 10;
     setInterval(function() {
     let remtime = time--;
@@ -68,7 +75,10 @@ function timerEasy() {
       clearInterval(time);
     document.getElementById("win").classList.remove("none");
     document.getElementById("time").innerHTML = "Winner";
-    clearInterval;
+    clearInterval(time);
+    cards.forEach(function(card) {
+    card.removeEventListener("click", clicker);
+    });
     console.log("winner");
 }
 
@@ -76,16 +86,16 @@ function timerEasy() {
     document.getElementById("lose").classList.remove("none");
     console.log("lose");
       clearInterval(time);
+    cards.forEach(function(card) {
+    card.removeEventListener("click", clicker);
+});
     }
+
   }, 1000);
-  button1.removeEventListener("click", timerEasy);
+ /* button1.removeEventListener("click", timerEasy);
   button2.removeEventListener("click", timerMedium);
   button3.removeEventListener("click", timerHard);
-  button4.removeEventListener("click", timerExtraHard);
-
-  cards.forEach(function(card) {
-  card.addEventListener("click", clicker);
-});
+  button4.removeEventListener("click", timerExtraHard);*/
 }
 
 
@@ -204,11 +214,6 @@ function turn() {
       firstcard.removeEventListener("click", turn);
       secondcard.removeEventListener("click", turn);
       resetBoard();
-  /*    setTimeout(function() {
-        firstcard.classList.add("fade-out");
-        secondcard.classList.add("fade-out");
-      }, 800);*/
-            console.log("Function fired");
       cardMatchArray.push("firstcard");
       cardMatchArray.push("secondcard");
       console.log(cardMatchArray);
@@ -224,14 +229,16 @@ function turn() {
 
 /*---------------------------------------------------------------count cards clicked*/
 
+
 cards.forEach(function(card) {
   card.addEventListener("click", clicker);
 });
+
 function clicker() {
-    let clicksAdd = 0;
   clicksAdd = clicks++;
   let countAdd = document.getElementById("rotate-count");
   countAdd.innerText = clicksAdd;
+  
   console.log("clicks counted");
 }
 
@@ -268,14 +275,6 @@ function resetBoard() {
     secondcard = null;
     isFirstCard = false;
 }
-
-/*cards.forEach(function (card) {
-  card.addEventListener("click", wandSound);
-});
-function wandSound() {
-    let sound = new Audio("../sound/wand.mp3");
-    sound.play;
-}*/
 
 
 /*button1.addEventListener("click", badgeChange);
