@@ -31,6 +31,8 @@ button5.addEventListener("click", resetGame);
     document.getElementById("lose").classList.add("none");
     document.getElementById("time").innerHTML = "Good Luck";
     document.getElementById("rotate-count").innerHTML = "Ready";
+    document.getElementById("flying").classList.remove("flyingHarry");
+    document.getElementById("flying").classList.remove("dementor");
     cardMatchArray = [];
     let clickAdd = 0;
 
@@ -75,6 +77,7 @@ function timerEasy() {
       clearInterval(time);
     document.getElementById("win").classList.remove("none");
     document.getElementById("time").innerHTML = "Winner";
+    document.getElementById("flying").classList.add("flyingHarry");
     clearInterval(time);
     cards.forEach(function(card) {
     card.removeEventListener("click", clicker);
@@ -84,6 +87,7 @@ function timerEasy() {
 
     if (cardMatchArray.length !== 16 && remtime === 0) {
     document.getElementById("lose").classList.remove("none");
+    document.getElementById("flying").classList.add("dementor");
     console.log("lose");
       clearInterval(time);
     cards.forEach(function(card) {

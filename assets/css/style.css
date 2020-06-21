@@ -174,59 +174,9 @@
     transform: rotateY(180deg);
 }
 
-.fade-out {
-  animation: fadeOut ease 0.8s;
-  -webkit-animation: fadeOut ease 0.8s;
-  -moz-animation: fadeOut ease 0.8s;
-  -o-animation: fadeOut ease 0.8s;
-  -ms-animation: fadeOut ease 0.8s;
-}
 
-/*-----------------------www.medium.com*/
-@keyframes fadeOut {
-  0% {
-    opacity:1;
-  }
-  100% {
-    opacity:0;
-  }
-}
 
-@-moz-keyframes fadeOut {
-  0% {
-    opacity:1;
-  }
-  100% {
-    opacity:0;
-  }
-}
 
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity:1;
-  }
-  100% {
-    opacity:0;
-  }
-}
-
-@-o-keyframes fadeOut {
-  0% {
-    opacity:1;
-  }
-  100% {
-    opacity:0;
-  }
-}
-
-@-ms-keyframes fadeOut {
-  0% {
-    opacity:1;
-  }
-  100% {
-    opacity:0;
-}
-}
 
 
 /*---------------------------------------------------------------win*/
@@ -237,7 +187,7 @@
 
 .winner {
     font-size: 100px;
-    color: orange;
+    color: #e3a000;
     text-align: center;
 }
 
@@ -249,7 +199,7 @@
 
 .lose {
     font-size: 100px;
-    color: purple;
+    color:#9c1203;
     text-align: center;
 }
 
@@ -286,15 +236,9 @@
     color: #e3a000;
 }
 
-
-
-
 .fcard {
     background-color: white;
 }
-
-
-
 
 #start-easy {
     background-color: #9c1203;
@@ -371,7 +315,7 @@
     width: 150%;
 }
 
-#flyingHarry {
+.flyingHarry {
     position: absolute;
     background-image: url('../images/harryfly.png');
     background-repeat: no-repeat;
@@ -383,7 +327,7 @@
     -o-animation: moving 10s linear infinite;
 }
 
-#dementor {
+.dementor {
     position: absolute;
     background-image: url('../images/Creature_2.png');
     background-repeat: no-repeat;
