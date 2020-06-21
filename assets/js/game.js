@@ -1,9 +1,9 @@
 const cards = document.querySelectorAll(".card");
 const cardreset = document.querySelectorAll(".card");
-const button1 = document.getElementById("start-easy");
-const button2 = document.getElementById("start-medium");
-const button3 = document.getElementById("start-hard");
-const button4 = document.getElementById("start-extrahard");
+const refEasyBtn = document.getElementById("start-easy");
+const refMediumBtn = document.getElementById("start-medium");
+const refHardBtn = document.getElementById("start-hard");
+const refXHardBtn = document.getElementById("start-extrahard");
 const button5 = document.getElementById("reset");
 const gameboard = document.getElementById("board");
 const bcards = document.getElementsByClassName("bcard");
@@ -26,7 +26,7 @@ cards.forEach(function(card) {
 
 button5.addEventListener("click", resetGame);
     function resetGame() {
-    button1.addEventListener("click", timerEasy);
+//    button1.addEventListener("click", timerEasy);
     document.getElementById("win").classList.add("none");
     document.getElementById("lose").classList.add("none");
     document.getElementById("time").innerHTML = "Good Luck";
@@ -34,9 +34,7 @@ button5.addEventListener("click", resetGame);
     document.getElementById("flying").classList.remove("flyingHarry");
     document.getElementById("flying").classList.remove("dementor");
     cardMatchArray = [];
-    //shufflecards();
-    let clickAdd = 0;
-
+    shufflecards();
     isFirstCard = false;
     secondcard = null;
 
@@ -47,13 +45,12 @@ button5.addEventListener("click", resetGame);
     card.addEventListener("click", clicker);
     });
 
-    $("div").removeClass("rotate");
- 
-    
-  button1.addEventListener("click", timerEasy);
-  button2.addEventListener("click", timerMedium);
-  button3.addEventListener("click", timerHard);
-  button4.addEventListener("click", timerExtraHard);
+    $("div").removeClass("rotate"); 
+
+  refEasyBtn.addEventListener("click", timerEasy);
+  refMediumBtn.addEventListener("click", timerMedium);
+  refHardBtn.addEventListener("click", timerHard);
+  refXHardBtn.addEventListener("click", timerExtraHard);
 }
 
 
@@ -61,10 +58,123 @@ button5.addEventListener("click", resetGame);
 
 //timer
 
-button1.addEventListener("click", timerEasy);
+refEasyBtn.addEventListener("click", timerEasy);
 function timerEasy() {
     resetGame();
-    let time = 10;
+    let time = 120;
+    setInterval(function() {
+    let remtime = time--;
+    if (remtime >= 0) {
+      countdown = document.getElementById("time");
+      countdown.innerText = remtime;
+      console.log("clicked timer easy");
+    }
+  if (cardMatchArray.length === 16 && remtime > 0) {
+      clearInterval(time);
+    document.getElementById("win").classList.remove("none");
+    document.getElementById("time").innerHTML = "Winner";
+    document.getElementById("flying").classList.add("flyingHarry");
+    clearInterval(time);
+    cards.forEach(function(card) {
+    card.removeEventListener("click", clicker);
+    });
+    console.log("winner");
+}
+
+    if (cardMatchArray.length !== 16 && remtime === 0) {
+    document.getElementById("lose").classList.remove("none");
+    document.getElementById("time").innerHTML = "Game Over";
+    document.getElementById("flying").classList.add("dementor");
+    console.log("lose");
+      clearInterval(time);
+    cards.forEach(function(card) {
+    card.removeEventListener("click", clicker);
+});
+    }
+  }, 1000);
+ /* button1.removeEventListener("click", timerEasy);
+  button2.removeEventListener("click", timerMedium);
+  button3.removeEventListener("click", timerHard);
+  button4.removeEventListener("click", timerExtraHard);*/
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+
+
+
+refMediumBtn.addEventListener("click", timerMedium);
+function timerMedium() {
+    resetGame();
+    let time = 90;
+    setInterval(function() {
+    let remtime = time--;
+    if (remtime >= 0) {
+      countdown = document.getElementById("time");
+      countdown.innerText = remtime;
+      console.log("clicked timer easy");
+    }
+  if (cardMatchArray.length === 16 && remtime > 0) {
+      clearInterval(time);
+    document.getElementById("win").classList.remove("none");
+    document.getElementById("time").innerHTML = "Winner";
+    document.getElementById("flying").classList.add("flyingHarry");
+    clearInterval(time);
+    cards.forEach(function(card) {
+    card.removeEventListener("click", clicker);
+    });
+    console.log("winner");
+}
+
+    if (cardMatchArray.length !== 16 && remtime === 0) {
+    document.getElementById("lose").classList.remove("none");
+    document.getElementById("flying").classList.add("dementor");
+    console.log("lose");
+      clearInterval(time);
+    cards.forEach(function(card) {
+    card.removeEventListener("click", clicker);
+});
+    }
+  }, 1000);}
+
+refHardBtn.addEventListener("click", timerHard);
+function timerHard() {
+    resetGame();
+    let time = 60;
+    setInterval(function() {
+    let remtime = time--;
+    if (remtime >= 0) {
+      countdown = document.getElementById("time");
+      countdown.innerText = remtime;
+      console.log("clicked timer easy");
+    }
+  if (cardMatchArray.length === 16 && remtime > 0) {
+      clearInterval(time);
+    document.getElementById("win").classList.remove("none");
+    document.getElementById("time").innerHTML = "Winner";
+    document.getElementById("flying").classList.add("flyingHarry");
+    clearInterval(time);
+    cards.forEach(function(card) {
+    card.removeEventListener("click", clicker);
+    });
+    console.log("winner");
+}
+
+    if (cardMatchArray.length !== 16 && remtime === 0) {
+    document.getElementById("lose").classList.remove("none");
+    document.getElementById("flying").classList.add("dementor");
+    console.log("lose");
+      clearInterval(time);
+    cards.forEach(function(card) {
+    card.removeEventListener("click", clicker);
+});
+    }
+  }, 1000);}
+
+refXHardBtn.addEventListener("click", timerExtraHard);
+function timerExtraHard() {
+    resetGame();
+    let time = 30;
     setInterval(function() {
     let remtime = time--;
     if (remtime >= 0) {
@@ -94,103 +204,7 @@ function timerEasy() {
 });
     }
 
-  }, 1000);
- /* button1.removeEventListener("click", timerEasy);
-  button2.removeEventListener("click", timerMedium);
-  button3.removeEventListener("click", timerHard);
-  button4.removeEventListener("click", timerExtraHard);*/
-}
-
-
-//--------------------------------------------------------------------------------------------------------------
-
-
-
-button2.addEventListener("click", timerMedium);
-function timerMedium() {
-  let time = 90;
-  setInterval(function() {
-    let remtime = time--;
-    if (remtime >= 0) {
-      countdown = document.getElementById("time");
-      countdown.innerText = remtime;
-      console.log("clicked timer medium");
-    }
-if (cardMatchArray.length === 16 && remtime > 0) {
-    document.getElementById("win").classList.remove("none");
-    clearInterval(time);
-    document.getElementById("time").innerHTML = "Winner";
-    console.log("winner");
-clearInterval(time);}
-    
-
-    if (remtime === 0) {
-    document.getElementById("lose").classList.remove("none");
-    console.log("lose");
-      clearInterval(time);
-    }
-  }, 1000);
-  button1.removeEventListener("click", timerEasy);
-  button2.removeEventListener("click", timerMedium);
-  button3.removeEventListener("click", timerHard);
-  button4.removeEventListener("click", timerExtraHard);
-}
-
-button3.addEventListener("click", timerHard);
-function timerHard() {
-  let time = 60;
-  setInterval(function() {
-    let remtime = time--;
-    if (remtime >= 0) {
-      countdown = document.getElementById("time");
-      countdown.innerText = remtime;
-      console.log("clicked timer hard");
-    }
-if (cardMatchArray.length === 16 && remtime > 0) {
-    document.getElementById("win").classList.remove("none");
-    clearInterval(time);
-    document.getElementById("time").innerHTML = "Winner";
-    console.log("winner");}
-
-    if (remtime === 0) {
-    document.getElementById("lose").classList.remove("none");
-    console.log("lose");
-      clearInterval(time);
-    }
-  }, 1000);
-  button1.removeEventListener("click", timerEasy);
-  button2.removeEventListener("click", timerMedium);
-  button3.removeEventListener("click", timerHard);
-  button4.removeEventListener("click", timerExtraHard);
-}
-
-button4.addEventListener("click", timerExtraHard);
-function timerExtraHard() {
-  let time = 30;
-  setInterval(function() {
-    let remtime = time--;
-    if (remtime >= 0) {
-      countdown = document.getElementById("time");
-      countdown.innerText = remtime;
-      console.log("clicked timer extrahard");
-    }
-if (cardMatchArray.length === 16 && remtime > 0) {
-    document.getElementById("win").classList.remove("none");
-    clearInterval(time);
-    document.getElementById("time").innerHTML = "Winner";
-    console.log("winner");}
-
-    if (remtime === 0) {
-    document.getElementById("lose").classList.remove("none");
-    console.log("lose");
-      clearInterval(time);
-    }
-  }, 1000);
-  button1.removeEventListener("click", timerEasy);
-  button2.removeEventListener("click", timerMedium);
-  button3.removeEventListener("click", timerHard);
-  button4.removeEventListener("click", timerExtraHard);
-}
+  }, 1000);}
 
 //turning / matching cards
 
@@ -286,5 +300,3 @@ function playWand() {
     wand.play();
     console.log("sound");
 }
-
-
