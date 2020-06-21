@@ -6,8 +6,6 @@
 #### To try and add another challenge there are four different countdown times. 
 #### The theme for the game is Harry Potter as this is something my daughter has grown up with and loves
 
- 
-
 ### UX: 
 #### A game which challenges the player to remember where a picture card is positioned on the board.
 #### Smooth animation of cards rotating when clicked upon and when unmatched cards turn back. 
@@ -18,7 +16,7 @@
 
 ### User ideas: 
 #### N Hobday: 
-#### "I love Harry Potter, read all of the books and watched the films. The game should draw on images and characters across the HP franchise."
+#### "I love Harry Potter, read all of the books and watched the films. The game should draw on images and characters across the Harry Potter franchise."
 #### J Buckley: 
 #### "The game should have a magical feel in line with the subject matter."
 
@@ -58,8 +56,9 @@
 #### Card face, back and animation images taken from Clipart Library, http://clipart-library.com/
 
 ### Bugs
-#### Sound not working on card click.
+#### Sound not working on card click. Now working and added as match cards sound. src link was wrong.
 #### House badges not displaying when start button clicked.
+#### Reset the click counter on restart.
 
 
 ### Testing:
@@ -69,6 +68,8 @@
 ### Deployment:
 
 ### Credits:
+#### First 9 lines for function turn() taken from freeCodeCamp.org.
+#### Shuffle card code taken from 
 #### As mention previously if would like to credit the source for the images used, https://harrypotter.fandom.com/ and http://clipart-library.com/.
 #### For the animation code from https://www.codesdope.com/blog/article/css3-moving-cloud-animation-with-airplane/.
 #### Sound of wand credits go to soundbible.com recorded by Mike Koenig.
