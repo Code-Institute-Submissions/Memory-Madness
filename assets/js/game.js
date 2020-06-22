@@ -11,22 +11,25 @@ let clicks = 1;
 let firstcard;
 let secondcard;
 let card;
+let countAdd = 0;
 //let badgeImg = "";
+let boardLock = false;
 let allCards = false;
 let isFirstCard = false;
 let cardMatchArray = [];
 
 //start
 
+
 /*function cardLock() {
 cards.forEach(function(card) {
-  card.removeEventListener("click", clicker);
+  card.removeEventListener("click", turn);
 });}*/
 
 
 button5.addEventListener("click", resetGame);
     function resetGame() {
-//    button1.addEventListener("click", timerEasy);
+        shufflecards();
     document.getElementById("win").classList.add("none");
     document.getElementById("lose").classList.add("none");
     document.getElementById("time").innerHTML = "Good Luck";
@@ -34,10 +37,9 @@ button5.addEventListener("click", resetGame);
     document.getElementById("flying").classList.remove("flyingHarry");
     document.getElementById("flying").classList.remove("dementor");
     cardMatchArray = [];
-    shufflecards();
     isFirstCard = false;
     secondcard = null;
-
+    countAdd = 0;
     cards.forEach(function (card) {
     card.addEventListener("click", turn);
     });
@@ -61,7 +63,7 @@ button5.addEventListener("click", resetGame);
 refEasyBtn.addEventListener("click", timerEasy);
 function timerEasy() {
     resetGame();
-    let time = 120;
+    let time = 12;
     setInterval(function() {
     let remtime = time--;
     if (remtime >= 0) {
@@ -128,6 +130,7 @@ function timerMedium() {
 
     if (cardMatchArray.length !== 16 && remtime === 0) {
     document.getElementById("lose").classList.remove("none");
+    document.getElementById("time").innerHTML = "Game Over";
     document.getElementById("flying").classList.add("dementor");
     console.log("lose");
       clearInterval(time);
@@ -162,6 +165,7 @@ function timerHard() {
 
     if (cardMatchArray.length !== 16 && remtime === 0) {
     document.getElementById("lose").classList.remove("none");
+    document.getElementById("time").innerHTML = "Game Over";
     document.getElementById("flying").classList.add("dementor");
     console.log("lose");
       clearInterval(time);
@@ -196,6 +200,7 @@ function timerExtraHard() {
 
     if (cardMatchArray.length !== 16 && remtime === 0) {
     document.getElementById("lose").classList.remove("none");
+    document.getElementById("time").innerHTML = "Game Over";
     document.getElementById("flying").classList.add("dementor");
     console.log("lose");
       clearInterval(time);
@@ -211,9 +216,8 @@ function timerExtraHard() {
 cards.forEach(function (card) {
   card.addEventListener("click", turn);
 });
-
 function turn() {
-  if (this === firstcard)
+  if (boardLock)
     return;
   this.classList.add("rotate");
   if (!isFirstCard) {
@@ -236,9 +240,11 @@ function turn() {
       cardMatchArray.push("secondcard");
       console.log(cardMatchArray);
     } else {
+        boardLock = true;
       setTimeout(function() {
         firstcard.classList.remove("rotate");
         secondcard.classList.remove("rotate");
+        boardLock = false;
         resetBoard();
       }, 800);
     }
