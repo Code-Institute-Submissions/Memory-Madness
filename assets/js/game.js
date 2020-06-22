@@ -1,3 +1,5 @@
+
+
 const cards = document.querySelectorAll(".card");
 const cardreset = document.querySelectorAll(".card");
 const refEasyBtn = document.getElementById("start-easy");
@@ -7,11 +9,11 @@ const refXHardBtn = document.getElementById("start-extrahard");
 const button5 = document.getElementById("reset");
 const gameboard = document.getElementById("board");
 const bcards = document.getElementsByClassName("bcard");
+let countAdd = document.getElementById("rotate-count");
 let clicks = 1;
 let firstcard;
 let secondcard;
 let card;
-let countAdd = 0;
 //let badgeImg = "";
 let boardLock = false;
 let allCards = false;
@@ -19,17 +21,18 @@ let isFirstCard = false;
 let cardMatchArray = [];
 
 //start
+window.onload = cardLock();
 
+function cardLock() {
+boardLock = true;
+  console.log("frozen card");
+}
 
-/*function cardLock() {
-cards.forEach(function(card) {
-  card.removeEventListener("click", turn);
-});}*/
 
 
 button5.addEventListener("click", resetGame);
     function resetGame() {
-        shufflecards();
+    shufflecards();
     document.getElementById("win").classList.add("none");
     document.getElementById("lose").classList.add("none");
     document.getElementById("time").innerHTML = "Good Luck";
@@ -37,9 +40,10 @@ button5.addEventListener("click", resetGame);
     document.getElementById("flying").classList.remove("flyingHarry");
     document.getElementById("flying").classList.remove("dementor");
     cardMatchArray = [];
+    boardLock = false;
     isFirstCard = false;
     secondcard = null;
-    countAdd = 0;
+    clicks = 1;
     cards.forEach(function (card) {
     card.addEventListener("click", turn);
     });
@@ -49,10 +53,12 @@ button5.addEventListener("click", resetGame);
 
     $("div").removeClass("rotate"); 
 
-  refEasyBtn.addEventListener("click", timerEasy);
+    addBtnListerner();
+
+  /*refEasyBtn.addEventListener("click", timerEasy);
   refMediumBtn.addEventListener("click", timerMedium);
   refHardBtn.addEventListener("click", timerHard);
-  refXHardBtn.addEventListener("click", timerExtraHard);
+  refXHardBtn.addEventListener("click", timerExtraHard);*/
 }
 
 
@@ -63,6 +69,7 @@ button5.addEventListener("click", resetGame);
 refEasyBtn.addEventListener("click", timerEasy);
 function timerEasy() {
     resetGame();
+    removeBtnListerner();
     let time = 12;
     setInterval(function() {
     let remtime = time--;
@@ -79,6 +86,7 @@ function timerEasy() {
     clearInterval(time);
     cards.forEach(function(card) {
     card.removeEventListener("click", clicker);
+    addBtnListerner();
     });
     console.log("winner");
 }
@@ -91,14 +99,12 @@ function timerEasy() {
       clearInterval(time);
     cards.forEach(function(card) {
     card.removeEventListener("click", clicker);
+    addBtnListerner();
 });
     }
-  }, 1000);
- /* button1.removeEventListener("click", timerEasy);
-  button2.removeEventListener("click", timerMedium);
-  button3.removeEventListener("click", timerHard);
-  button4.removeEventListener("click", timerExtraHard);*/
-}
+  }, 1000);}
+  
+ 
 
 
 //--------------------------------------------------------------------------------------------------------------
@@ -108,6 +114,7 @@ function timerEasy() {
 refMediumBtn.addEventListener("click", timerMedium);
 function timerMedium() {
     resetGame();
+    removeBtnListerner();
     let time = 90;
     setInterval(function() {
     let remtime = time--;
@@ -124,6 +131,7 @@ function timerMedium() {
     clearInterval(time);
     cards.forEach(function(card) {
     card.removeEventListener("click", clicker);
+    addBtnListerner();
     });
     console.log("winner");
 }
@@ -136,6 +144,7 @@ function timerMedium() {
       clearInterval(time);
     cards.forEach(function(card) {
     card.removeEventListener("click", clicker);
+    addBtnListerner();
 });
     }
   }, 1000);}
@@ -143,6 +152,7 @@ function timerMedium() {
 refHardBtn.addEventListener("click", timerHard);
 function timerHard() {
     resetGame();
+    removeBtnListerner();
     let time = 60;
     setInterval(function() {
     let remtime = time--;
@@ -159,6 +169,7 @@ function timerHard() {
     clearInterval(time);
     cards.forEach(function(card) {
     card.removeEventListener("click", clicker);
+    addBtnListerner();
     });
     console.log("winner");
 }
@@ -171,6 +182,7 @@ function timerHard() {
       clearInterval(time);
     cards.forEach(function(card) {
     card.removeEventListener("click", clicker);
+    addBtnListerner();
 });
     }
   }, 1000);}
@@ -178,6 +190,7 @@ function timerHard() {
 refXHardBtn.addEventListener("click", timerExtraHard);
 function timerExtraHard() {
     resetGame();
+    removeBtnListerner();
     let time = 30;
     setInterval(function() {
     let remtime = time--;
@@ -194,6 +207,7 @@ function timerExtraHard() {
     clearInterval(time);
     cards.forEach(function(card) {
     card.removeEventListener("click", clicker);
+    addBtnListerner();
     });
     console.log("winner");
 }
@@ -206,6 +220,7 @@ function timerExtraHard() {
       clearInterval(time);
     cards.forEach(function(card) {
     card.removeEventListener("click", clicker);
+    addBtnListerner();
 });
     }
 
@@ -227,9 +242,7 @@ function turn() {
   } else {
     isFirstCard = false;
     secondcard = this;
-
     console.log("second card");
-
 
     if (firstcard.dataset.colours === secondcard.dataset.colours) {
       firstcard.removeEventListener("click", turn);
@@ -251,16 +264,15 @@ function turn() {
   }
 }
 
-//count cards clicked
+//count clicked
 
 cards.forEach(function(card) {
   card.addEventListener("click", clicker);
 });
-
 function clicker() {
   clicksAdd = clicks++;
-  let countAdd = document.getElementById("rotate-count");
-  countAdd.innerText = clicksAdd;
+  //let countAdd = document.getElementById("rotate-count");
+  countAdd.innerHTML = clicksAdd;
   
   console.log("clicks counted");
 }
@@ -275,34 +287,32 @@ function shufflecards() {
   console.log("Shuffle cards");
 }
 
-//Game Over
-
-/*function gameOver() {
-      if (remtime === 0) {
-    document.getElementById("lose").classList.remove("none");
-    console.log("lose");
-  }
-}
-}*/
-
-//Win
-/*function win() {
-  if (cardMatchArray.length === 16 && remtime > 0) {
-    document.getElementById("win").classList.remove("none");
-    console.log("winner");
-  }
-}*/
-
-//Sound
-
 function resetBoard() {
     firstcard = null;
     secondcard = null;
     isFirstCard = false;
 }
 
+//Sound
+
 function playWand() {
     let wand = new Audio("assets/sound/wand.wav");
     wand.play();
     console.log("sound");
+}
+
+//Start button add and remove functions
+
+ function removeBtnListerner() {
+    refEasyBtn.removeEventListener("click", timerEasy);
+    refMediumBtn.removeEventListener("click", timerMedium);
+    refHardBtn.removeEventListener("click", timerHard);
+    refXHardBtn.removeEventListener("click", timerExtraHard);
+}
+
+function addBtnListerner() {
+    refEasyBtn.addEventListener("click", timerEasy);
+    refMediumBtn.addEventListener("click", timerMedium);
+    refHardBtn.addEventListener("click", timerHard);
+    refXHardBtn.addEventListener("click", timerExtraHard);
 }
