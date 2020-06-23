@@ -13,32 +13,31 @@ The theme for the game is Harry Potter as this is something my daughter has grow
 •	Pop up animation on both win a lose outcomes.
 •	Adhere to the imagery of the Harry Potter them:
 
+## User ideas: 
+# N Hobday: 
+ "As a big fan of the Harry Potter franchise the game should incorporate images and sounds from this world. I would like the game to be fun, interactive and challenging. I would prefer to be able to play it on my mobile or tablet.”
+# J Buckley: 
+"The game should have a magical feel in line with the subject matter. Should by easy to use on mobile as I do not us the laptop for games. The game should be responsive so clicking on cards should trigger the card turn without delay and a countdown to add extra challenge."
 
+## Requirements:
+The requirements for the game are as follows.
+•	Create a clock which counts down.
+•	Create a counter to track the number of cards clicked.
+•	Create front face and back face of the card.
+•	Cards need to rotate and rotate back if no match.
+•	If cards match, do not rotate back.
+•	Enter cards into a match cards array.
+•	Create difficulty through reducing the game time.
+•	Winner animation is all cards turned before countdown reaches 0.
+•	Game over animation displayed upon not turning all cards before countdown reaches 0.
+•	Check for all cards turned and clock not 0.
+•	No rotation of card if card is already turned.
+•	Reset of game.
+•	HP fonts.
+•	HP images.
+•	HP colour scheme.
+•	HP music.
 
-### User ideas: 
-#### N Hobday: 
-#### "I love Harry Potter, read all of the books and watched the films. The game should draw on images and characters across the Harry Potter franchise."
-#### J Buckley: 
-#### "The game should have a magical feel in line with the subject matter."
-
-### Requirements:
-#### The requirements for the game are as follows.
-#### Create a clock which counts down.
-#### Create a counter to track the number of cards clicked.
-#### Create front face and back face of the card.
-#### Cards need to rotate and rotate back if no match.
-#### If cards match, do not rotate back.
-#### Match up cards entered into an array.
-#### Create difficulty button to reduced the game time.
-#### Winner animation is all cards turned before countdown reaches 0.
-#### Game over animation displayed upon not turning all cards before countdown reaches 0.
-#### Check for all cards turned and clock not 0.
-#### No rotation of card if card is already turned.
-#### Reset of game.
-#### HP fonts.
-#### HP images.
-#### HP colour scheme.
-#### HP music - if time allows.
 
 ### Design:
 #### The theme of this project is Harry Potter and therefore all page elements should be consistant with what everyone has come to expect from this world.
