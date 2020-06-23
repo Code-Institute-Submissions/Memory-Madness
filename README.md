@@ -1,18 +1,19 @@
-# Title: 
-## Hogwarts Memory Madness
-### Introduction: 
-#### The project ‘Hogwarts memory Madness’ is based on the traditional card memory game where a player must turn a card and then turn a second card to see if the pictures match. If no match then the cards are turned back and a new card is picked. The idea is to match the cards in the least amount of turns.
-#### This version will count the number of turned cards to complete the game plus the additional challenge of beating the clock before the game is over.
-#### To try and add another challenge there are four different countdown times. 
-#### The theme for the game is Harry Potter as this is something my daughter has grown up with and loves
+# Hogwarts Memory Madness
+## Introduction: 
+ The project ‘Hogwarts memory Madness’ is based on the traditional card memory game where a player must turn a card and then turn a second card to see if the pictures match. If no match then the cards are turned back and a new card is picked. The idea is to match the cards in the least amount of turns.
+This version will count the number of turned cards to complete the game plus the additional challenge of beating the clock before the game is over.
+To try and add another challenge there are four different countdown times. 
+The theme for the game is Harry Potter as this is something my daughter has grown up with and loves
+## UX: 
+# User Goals
+•	A game which challenges the player to remember where a picture card is positioned on the board.
+•	Interactive game with playability on both desktop and mobile.
+•	Smooth animation of cards rotating when clicked upon.
+•	Incorporate sound when player interacts with a card.
+•	Pop up animation on both win a lose outcomes.
+•	Adhere to the imagery of the Harry Potter them:
 
-### UX: 
-#### A game which challenges the player to remember where a picture card is positioned on the board.
-#### Smooth animation of cards rotating when clicked upon and when unmatched cards turn back. 
-#### Game will be playable on mobile through to desktop screen. Keep the playability on mobile through card size reduction to maximise viewable card deck along with time and click counter
-#### Incorporate sound when player interacts with a card.
-#### Provide animation on both win a lose outcomes.
-#### Base all imagery and fonts on the Harry Potter theme where supported by the browser
+
 
 ### User ideas: 
 #### N Hobday: 
@@ -66,10 +67,12 @@
 #### Other testing has involved checking start buttons not active once game begins, unable to rotate if card already turned, ---------------
 
 ### Deployment:
+web https://hob71.github.io/MP2---Memory-Madness/
+gitpod https://github.com/hob71/MP2---Memory-Madness
 
 ### Credits:
 #### First 9 lines for function turn() taken from freeCodeCamp.org.
-#### Shuffle card code taken from 
+#### Shuffle card code taken from youtube shuffle card tutorial.
 #### As mention previously if would like to credit the source for the images used, https://harrypotter.fandom.com/ and http://clipart-library.com/.
 #### For the animation code from https://www.codesdope.com/blog/article/css3-moving-cloud-animation-with-airplane/.
 #### Sound of wand credits go to soundbible.com recorded by Mike Koenig.
