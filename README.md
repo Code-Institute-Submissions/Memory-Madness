@@ -4,8 +4,8 @@
 This version will count the number of turned cards to complete the game plus the additional challenge of beating the clock before the game is over.
 To try and add another challenge there are four different countdown times. 
 The theme for the game is Harry Potter as this is something my daughter has grown up with and loves
-## UX: 
-# User Goals
+# UX: 
+## User Goals
 *	A game which challenges the player to remember where a picture card is positioned on the board.
 *	Interactive game with playability on both desktop and mobile.
 *	Smooth animation of cards rotating when clicked upon.
@@ -13,13 +13,13 @@ The theme for the game is Harry Potter as this is something my daughter has grow
 *	Pop up animation on both win a lose outcomes.
 *	Adhere to the imagery of the Harry Potter them:
 
-## User ideas: 
-# N Hobday: 
+# User ideas: 
+## N Hobday: 
  "As a big fan of the Harry Potter franchise the game should incorporate images and sounds from this world. I would like the game to be fun, interactive and challenging. I would prefer to be able to play it on my mobile or tablet.”
-# J Buckley: 
+## J Buckley: 
 "The game should have a magical feel in line with the subject matter. Should by easy to use on mobile as I do not us the laptop for games. The game should be responsive so clicking on cards should trigger the card turn without delay and a countdown to add extra challenge."
 
-## Requirements:
+# Requirements:
 The requirements for the game are as follows.
 *	Create a clock which counts down.
 *	Create a counter to track the number of cards clicked.
@@ -38,44 +38,69 @@ The requirements for the game are as follows.
 *	HP colour scheme.
 *	HP music.
 
+# Design:
+The theme of this project is Harry Potter and therefore all page elements should be consistant with what everyone has come to expect from this world.
 
-### Design:
-#### The theme of this project is Harry Potter and therefore all page elements should be consistant with what everyone has come to expect from this world.
-#### Card faces contain images of Harry Potter, Hermoine Granger, Hagrid, 9 ¾ station sign, the snitch, a phoenix, 
-#### Card backs show house badges and badge will change depending on difficulty level.
-#### Backdrop is an image of the grand hall in Hogwarts with floating candles.
+## Images:
+Card faces contain images of Harry Potter, Hermoine Granger, Hagrid, 9 ¾ station sign, the snitch, a phoenix, 
+Background image is of the Grand Hall in Hogwarts with floating candles. 
 
-### Fonts: 
-#### harryp.ttf and lumos.ttf, back up with Caudex and Chelsea Market
+Card back displays Hogwarts crest. 
+The background image courtesy of https://harrypotter.fandom.com/. 
+Card face, back and animation images taken from Clipart Library, http://clipart-library.com/.
 
-### Colours: 
-#### The colours that have been used throughout the game are in line with the theme. These are #9c1203, #e3a000, #2d004d, #033807 and #00165e.
+## Fonts: 
+ I have chosen the harryp.ttf and lumos.ttf which keep in line with the theme. The backup to the Harry Potter fonts are Caudex and Chelsea Market.
 
-### Images: 
-#### The background image courtesy of https://harrypotter.fandom.com/.
-#### Card face, back and animation images taken from Clipart Library, http://clipart-library.com/
+## Colours: 
+The colours which are used correspond to colours used within the houses of Hogwarts.
+The colours are:
+*	#9c1203 – this is a dark red.
+*	#e3a000 – this is a golden yellow.
+*	#2d004d – this is purple.
+*	#033807 – this is dark green.
+*	#00165e – this is purple
 
-### Bugs
-#### Sound not working on card click. Now working and added as match cards sound. src link was wrong.
-#### House badges not displaying when start button clicked.
-#### Reset the click counter on restart.
+## Background: 
+I chose the background image as from what I know of Harry Potter there are two images of Hogwarts which stick in my mind, either the outside image of the building or the Grand Hall.
 
 
-### Testing:
-#### Throughout the coding I have been able to test if functions have been called through adding console.log() at various stages. This code has now been removed from the final versio to keep the code clean.
-#### Other testing has involved checking start buttons not active once game begins, unable to rotate if card already turned, ---------------
+# Bugs
+### Problem-
+Sound not working on card click. 
+### Fix-
+Problem with source link found through inspection. Corrected and sound added to match cards.
 
-### Deployment:
+### Problem-
+House badges not displaying when different start button clicked. Tested by adding the class name and works but no when class added through Jquery script.
+### Fix-
+Still working on.
+
+### Problem-
+Reset the click counter on restart.
+### Fix-
+Targeted wrong variable, looked back through code and corrected.
+
+### Problem-
+Unable to rotate turned cards when resetting board.
+### Fix-
+
+
+# Testing:
+Throughout the coding I have been able to test if functions have been called through adding console.log() at various stages. This code has now been removed from the final versio to keep the code clean.
+Other testing has involved checking start buttons not active once game begins, unable to rotate if card already turned, ---------------
+
+# Deployment:
 web https://hob71.github.io/MP2---Memory-Madness/
 gitpod https://github.com/hob71/MP2---Memory-Madness
 
-### Credits:
-#### First 9 lines for function turn() taken from freeCodeCamp.org.
-#### Shuffle card code taken from youtube shuffle card tutorial.
-#### As mention previously if would like to credit the source for the images used, https://harrypotter.fandom.com/ and http://clipart-library.com/.
-#### For the animation code from https://www.codesdope.com/blog/article/css3-moving-cloud-animation-with-airplane/.
-#### Sound of wand credits go to soundbible.com recorded by Mike Koenig.
+# Credits:
+ First 9 lines for function turn() taken from freeCodeCamp.org.
+ Shuffle card code taken from youtube shuffle card tutorial.
+ As mention previously if would like to credit the source for the images used, https://harrypotter.fandom.com/ and http://clipart-library.com/.
+ For the animation code from https://www.codesdope.com/blog/article/css3-moving-cloud-animation-with-airplane/.
+ Sound of wand credits go to soundbible.com recorded by Mike Koenig.
 
-### Acknowledge:
-#### A big thank you must be give to my mentor, Simen, for his support and motivation through this project. Also for the support and understanding given by student care.
+# Acknowledge:
+### A big thank you must be give to my mentor, Simen, for his support and motivation through this project. Also for the support and understanding given by student care.
 
