@@ -6,12 +6,12 @@ To try and add another challenge there are four different countdown times.
 The theme for the game is Harry Potter as this is something my daughter has grown up with and loves
 ## UX: 
 # User Goals
-•	A game which challenges the player to remember where a picture card is positioned on the board.
-•	Interactive game with playability on both desktop and mobile.
-•	Smooth animation of cards rotating when clicked upon.
-•	Incorporate sound when player interacts with a card.
-•	Pop up animation on both win a lose outcomes.
-•	Adhere to the imagery of the Harry Potter them:
+*	A game which challenges the player to remember where a picture card is positioned on the board.
+*	Interactive game with playability on both desktop and mobile.
+*	Smooth animation of cards rotating when clicked upon.
+*	Incorporate sound when player interacts with a card.
+*	Pop up animation on both win a lose outcomes.
+*	Adhere to the imagery of the Harry Potter them:
 
 ## User ideas: 
 # N Hobday: 
@@ -21,22 +21,22 @@ The theme for the game is Harry Potter as this is something my daughter has grow
 
 ## Requirements:
 The requirements for the game are as follows.
-•	Create a clock which counts down.
-•	Create a counter to track the number of cards clicked.
-•	Create front face and back face of the card.
-•	Cards need to rotate and rotate back if no match.
-•	If cards match, do not rotate back.
-•	Enter cards into a match cards array.
-•	Create difficulty through reducing the game time.
-•	Winner animation is all cards turned before countdown reaches 0.
-•	Game over animation displayed upon not turning all cards before countdown reaches 0.
-•	Check for all cards turned and clock not 0.
-•	No rotation of card if card is already turned.
-•	Reset of game.
-•	HP fonts.
-•	HP images.
-•	HP colour scheme.
-•	HP music.
+*	Create a clock which counts down.
+*	Create a counter to track the number of cards clicked.
+*	Create front face and back face of the card.
+*	Cards need to rotate and rotate back if no match.
+*	If cards match, do not rotate back.
+*	Enter cards into a match cards array.
+*	Create difficulty through reducing the game time.
+*	Winner animation is all cards turned before countdown reaches 0.
+*	Game over animation displayed upon not turning all cards before countdown reaches 0.
+*	Check for all cards turned and clock not 0.
+*	No rotation of card if card is already turned.
+*	Reset of game.
+*	HP fonts.
+*	HP images.
+*	HP colour scheme.
+*	HP music.
 
 
 ### Design:
