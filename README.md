@@ -84,6 +84,11 @@ Targeted wrong variable, looked back through code and corrected.
 Screen size enlarges when animation appears on mobile devices.
 ### Fix-
 
+### Problem-
+Fonts found do not work, the are 'sanitized' upon page load. Alternative HArry Potter fonts found with same issue.
+### Fix-
+Switched to backup fonts.
+
 # Wireframe and process mapping:
 To begin the process I draw out how I would like the game to appear on mobile and desktop. On mobile defining where start button line up two by two, number of cards in a column and sizing. On desktop buttons in one line and two rows of cards.
 In addition to this I have provided a process map where I attempted to draw out the game process with yes / no routes. This allowed me to check through the functions which would be required to generate the game.
@@ -92,6 +97,8 @@ In addition to this I have provided a process map where I attempted to draw out 
 Throughout the coding I have been able to test if functions have been called through adding console.log() at various stages. This code has now been removed from the final version to keep the code clean.
 Other testing has involved checking start buttons not active once game begins, unable to rotate if card already turned, reset clears array / clear click count and time and board is locked.
 Here is an example of the inspection console during a run:
+![Console logs](https://github.com/hob71/MP2---Memory-Madness/blob/master/consolelog.png)
+
 
 # Technologies used:
 * HTML
