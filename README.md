@@ -64,7 +64,6 @@ The colours are:
 ## Background: 
 I chose the background image as from what I know of Harry Potter there are two images of Hogwarts which stick in my mind, either the outside image of the building or the Grand Hall.
 
-
 # Bugs:
 ### Problem-
 Sound not working on card click. 
@@ -101,9 +100,19 @@ Here is an example of the inspection console during a run:
 * Bootstrap
 
 # Deployment:
+The project was developed in Gitpod and pushed to GitHub.
 
-    Published site: https://hob71.github.io/MP2---Memory-Madness/
-    GitHub site: https://github.com/hob71/MP2---Memory-Madness
+To deploy my Hogwarts Memory Madness project the process was as follows:-
+*Opened GitHub in web browser.
+*Logged in with username and password.
+*Selected my project repository, MP"---Memory Madness.
+*Went to setting and scrolled to GitHub Pages.
+*Chose master branch in 'Source'.
+
+Below are links to my GitHub and published sites.
+
+#### Published site: https://hob71.github.io/MP2---Memory-Madness/
+#### GitHub site: https://github.com/hob71/MP2---Memory-Madness
 
 The code in the deployed version is the same as my gitpod repository.
 
