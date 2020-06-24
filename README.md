@@ -65,7 +65,7 @@ The colours are:
 I chose the background image as from what I know of Harry Potter there are two images of Hogwarts which stick in my mind, either the outside image of the building or the Grand Hall.
 
 
-# Bugs
+# Bugs:
 ### Problem-
 Sound not working on card click. 
 ### Fix-
@@ -82,17 +82,31 @@ Reset the click counter on restart.
 Targeted wrong variable, looked back through code and corrected.
 
 ### Problem-
-Unable to rotate turned cards when resetting board.
+Screen size enlarges when animation appears on mobile devices.
 ### Fix-
 
+# Wireframe and process mapping:
+To begin the process I draw out how I would like the game to appear on mobile and desktop. On mobile defining where start button line up two by two, number of cards in a column and sizing. On desktop buttons in one line and two rows of cards.
+In addition to this I have provided a process map where I attempted to draw out the game process with yes / no routes. This allowed me to check through the functions which would be required to generate the game.
 
 # Testing:
-Throughout the coding I have been able to test if functions have been called through adding console.log() at various stages. This code has now been removed from the final versio to keep the code clean.
-Other testing has involved checking start buttons not active once game begins, unable to rotate if card already turned, ---------------
+Throughout the coding I have been able to test if functions have been called through adding console.log() at various stages. This code has now been removed from the final version to keep the code clean.
+Other testing has involved checking start buttons not active once game begins, unable to rotate if card already turned, reset clears array / clear click count and time and board is locked.
+Here is an example of the inspection console during a run:
+
+# Technologies used:
+* HTML
+* CSS
+* Javascript
+* Bootstrap
 
 # Deployment:
-web https://hob71.github.io/MP2---Memory-Madness/
-gitpod https://github.com/hob71/MP2---Memory-Madness
+
+    Published site: https://hob71.github.io/MP2---Memory-Madness/
+    GitHub site: https://github.com/hob71/MP2---Memory-Madness
+
+The code in the deployed version is the same as my gitpod repository.
+
 
 # Credits:
  First 9 lines for function turn() taken from freeCodeCamp.org.
@@ -104,3 +118,6 @@ gitpod https://github.com/hob71/MP2---Memory-Madness
 # Acknowledge:
 ### A big thank you must be give to my mentor, Simen, for his support and motivation through this project. Also for the support and understanding given by student care.
 
+# Final Notes:
+Going into this project I knew that learning Javascript was a challenge. Whilst developing the project it has helped me understand the language more and how powerful it is. 
+I have come out of the other side of the project with better understanding of Javascript.
