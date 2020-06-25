@@ -90,6 +90,7 @@ html {
   transition: 1s;
   border: none;
   background-color: transparent;
+  -webkit-transition: 1s linear;
 }
 
 .bcard,
@@ -160,6 +161,7 @@ html {
 .card.rotate {
   transition: transform 1s;
   transform: rotateY(180deg);
+  -webkit-transition: 1s transform;
 }
 
 /*win*/
