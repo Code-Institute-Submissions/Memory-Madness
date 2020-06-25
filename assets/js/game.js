@@ -50,7 +50,7 @@ refEasyBtn.addEventListener("click", timerEasy);
 function timerEasy() {
   resetGame();
   removeBtnListerner();
-  let time = 12;
+  let time = 120;
   setInterval(function () {
     let remtime = time--;
     if (remtime >= 0) {
@@ -279,7 +279,3 @@ function addBtnListerner() {
   refHardBtn.addEventListener("click", timerHard);
   refXHardBtn.addEventListener("click", timerExtraHard);
 }
-
-$(function () {
-  $('[data-toggle="popover"]').popover()
-})
