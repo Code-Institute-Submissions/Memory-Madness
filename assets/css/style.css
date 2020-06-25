@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 #game-screen {
   height: 100vh;
   width: 99vw;
@@ -23,10 +27,10 @@
 
 .message {
   font-family: "Caudex", serif;
-  margin: 20px 30px;
+  margin: 20px 30px 10px;
   text-align: center;
   font-size: 30px;
-  padding: 20px;
+  padding: 20px 20px 5px;
 }
 
 .info {
@@ -41,13 +45,14 @@
   font-family: "Chelsea Market", cursive;
   text-align: center;
   font-size: 40px;
-  padding: 20px;
+  padding: 6px;
 }
 
+
 #board {
-  height: 70%;
-  width: 80%;
-  margin: 20px auto;
+  height: 800px;
+  width: 800px;
+  margin: 12px auto 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -77,9 +82,9 @@
 }
 
 .card {
-  height: 170px;
+  height: 168px;
   width: 120px;
-  margin: 20px 32px;
+  margin: 10px 32px;
   position: relative;
   transform-style: preserve-3d;
   transition: 1s;
@@ -331,8 +336,9 @@
 
 @media only screen and (max-width: 741px) {
   .card {
-    height: 125px;
-    width: 85px;
+  height: 75px;
+  width: 50px;
+  margin: 10px 10px;
   }
 
   .start-btn {
@@ -341,19 +347,7 @@
     width: 140px;
   }
 
-  #start-easy {
-    font-size: 20px;
-  }
-
-  #start-medium {
-    font-size: 20px;
-  }
-
-  #start-hard {
-    font-size: 20px;
-  }
-
-  #start-extrahard {
+  #start-easy, #start-medium, #start-hard, #start-extrahard {
     font-size: 20px;
   }
 
@@ -380,17 +374,18 @@
   #countdown {
     text-align: center;
     font-size: 25px;
-    padding: 10px;
+    padding: 5px;
   }
 
   #clicks {
     text-align: center;
     font-size: 25px;
-    padding: 10px;
+    padding: 5px;
   }
 
   #board {
-    width: 90%;
+    width: 320px;
+    height: 300px;
     margin: 20px auto;
   }
 
