@@ -50,7 +50,7 @@ The background image courtesy of https://harrypotter.fandom.com/.
 Card face, back and animation images taken from Clipart Library, http://clipart-library.com/.
 
 ## Fonts: 
- I have chosen the harryp.ttf and lumos.ttf which keep in line with the theme. The backup to the Harry Potter fonts are Caudex and Chelsea Market.
+I have chosen the harryp.ttf and lumos.ttf which keep in line with the theme. The backup to the Harry Potter fonts are Caudex and Chelsea Market.
 
 ## Colours: 
 The colours which are used correspond to colours used within the houses of Hogwarts.
@@ -73,7 +73,7 @@ Problem with source link found through inspection. Corrected and sound added to 
 ### Problem-
 House badges not displaying when different start button clicked. Tested by adding the class name and works but no when class added through Jquery script.
 ### Fix-
-Still working on.
+Still working on and for future version. Images used for card face.
 
 ### Problem-
 Reset the click counter on restart.
@@ -83,11 +83,23 @@ Targeted wrong variable, looked back through code and corrected.
 ### Problem-
 Screen size enlarges when animation appears on mobile devices.
 ### Fix-
+Added the overflow-x: hidden to game screen.
 
 ### Problem-
-Fonts found do not work, the are 'sanitized' upon page load. Alternative HArry Potter fonts found with same issue.
+Fonts found do not work, the are 'sanitized' upon page load. Alternative Harry Potter fonts found with same issue.
 ### Fix-
-Switched to backup fonts.
+Switched to Caudex and Chelsea Market with serif and cursive as backup respectively.
+
+### Problem-
+Issue with certain versions of Safari on the transition of card rotation. This is to do with the 'all' which is assigned when just adding XXs. Known bug.
+### Fix-
+Several solutions found on internet, insert -webkit-backface-visible: hidden.
+
+### Problem-
+On mobile small deal for wand sound on first card match, after this sound happens on time.
+### Fix-
+To look at in next version.
+
 
 # Wireframe and process mapping:
 To begin the process I draw out how I would like the game to appear on mobile and desktop. On mobile defining where start button line up two by two, number of cards in a column and sizing. On desktop buttons in one line and two rows of cards.
@@ -97,8 +109,11 @@ In addition to this I have provided a process map where I attempted to draw out 
 Throughout the coding I have been able to test if functions have been called through adding console.log() at various stages. This code has now been removed from the final version to keep the code clean.
 Other testing has involved checking start buttons not active once game begins, unable to rotate if card already turned, reset clears array / clear click count and time and board is locked.
 Here is an example of the inspection console during a run:
+
 ![Console logs](https://github.com/hob71/MP2---Memory-Madness/blob/master/consolelog.png)
 
+Prototype of game was also tested by friends and family. Feedback from a few people was around the layout of the cards on mobile. Original layout was two cards and six rows.
+Playability was reduced as the player had to scroll up and down to find the cards to match and also slowed game play when against the clock. Now layout is four by four grid which is viewable on one screen without scrolling.
 
 # Technologies used:
 * HTML
@@ -125,11 +140,11 @@ The code in the deployed version is the same as my gitpod repository.
 
 
 # Credits:
- First 9 lines for function turn() taken from freeCodeCamp.org.
- Shuffle card code taken from youtube shuffle card tutorial.
- As mention previously if would like to credit the source for the images used, https://harrypotter.fandom.com/ and http://clipart-library.com/.
- For the animation code from https://www.codesdope.com/blog/article/css3-moving-cloud-animation-with-airplane/.
- Sound of wand credits go to soundbible.com recorded by Mike Koenig.
+ *First 9 lines for function turn() taken from freeCodeCamp.org.
+ *Shuffle card code taken from youtube shuffle card tutorial.
+ *As mention previously if would like to credit the source for the images used, https://harrypotter.fandom.com/ and http://clipart-library.com/.
+ *For the animation code from https://www.codesdope.com/blog/article/css3-moving-cloud-animation-with-airplane/.
+ *Sound of wand credits go to soundbible.com recorded by Mike Koenig.
 
 # Acknowledge:
 ### A big thank you must be give to my mentor, Simen, for his support and motivation through this project. Also for the support and understanding given by student care.
