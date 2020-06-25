@@ -99,6 +99,7 @@ html {
   border-radius: 15px;
   position: absolute;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .fcard {
