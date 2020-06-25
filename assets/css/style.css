@@ -1,389 +1,351 @@
 @import url("https://fonts.googleapis.com/css2?family=Caudex&family=Chelsea+Market&display=swap");
 
-    font-family: 'Caudex', serif;
-
-    font-family: 'Chelsea Market', cursive;
-
 * {
-    padding:0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 #game-screen {
-    height: 100vh;
-    width: 99vw;
-    background-image: url("../images/hogwarts-backdrop.jpg");
-    justify-content: center;
-    overflow-x: hidden;
+  height: 100vh;
+  width: 99vw;
+  background-image: url("../images/hogwarts-backdrop.jpg");
+  justify-content: center;
+  overflow-x: hidden;
 }
 
 .title {
-    font-family: 'Chelsea Market', cursive;
-    margin-top: 20px;
-    text-align: center;
-    font-size: 75px;
+  font-family: "Chelsea Market", cursive;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 75px;
 }
 
 .message {
-    font-family: 'Caudex', serif;
-    margin: 20px 30px;
-    text-align: center;
-    font-size: 30px;
-    padding: 20px;
+  font-family: "Caudex", serif;
+  margin: 20px 30px;
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
 }
 
 .info {
-    font-family: 'Caudex', serif;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 300;
-    margin-bottom: 20px;
+  font-family: "Caudex", serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 20px;
 }
 
-#countdown {
-    font-family: 'Chelsea Market', cursive;
-    text-align: center;
-    font-size: 40px;
-    padding: 20px;
+#clicks, #countdown {
+  font-family: "Chelsea Market", cursive;
+  text-align: center;
+  font-size: 40px;
+  padding: 20px;
 }
-
-#clicks {
-    font-family: 'Chelsea Market', cursive;
-    text-align: center;
-    font-size: 40px;
-    padding:20px;
-}
-
 
 #board {
-    height: 70%;
-    width: 80%;
-    margin: 20px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  height: 70%;
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .start-btn {
-    margin: 10px auto;
-    height: 50px;
-    width: 180px;
-    border-radius: 15px;
-    border: none;
-    border-color: none;
+  margin: 10px auto;
+  height: 50px;
+  width: 180px;
+  border-radius: 15px;
+  border: none;
+  border-color: none;
+  font-family: "Caudex", serif;
+  font-size: 30px;
 }
 
-/*.reset-btn {
-    margin: 10px auto;
-    height: 50px;
-    width: 180px;
-    border-radius: 15px;
-    border: none;
-}*/
-
-#start-easy {
-    font-family: 'Caudex', serif;
-    font-size: 30px;
-}
-#start-medium {
-    font-family: 'Caudex', serif;
-    font-size: 30px;
-}
-#start-hard {
-    font-family: 'Caudex', serif;
-    font-size: 30px;
-}
-#start-extrahard {
-    font-family: 'Caudex', serif;
-    font-size: 30px;
-}
-
-/*#reset {
-    font-size: 30px;
-}*/
 /*card*/
 
 .card.none {
-    display: none;
+  display: none;
 }
 
 .card {
-    height: 170px;
-    width: 120px;
-    margin: 20px 32px;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: 1.0s;
-    border: none;
-    background-color: transparent;
-
+  height: 170px;
+  width: 120px;
+  margin: 20px 32px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 1s;
+  border: none;
+  background-color: transparent;
 }
 
-.bcard, .fcard {
-    height:100%;
-    width: 100%;
-    border-radius: 15px;
-    position: absolute;
-    backface-visibility: hidden;
+.bcard,
+.fcard {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  position: absolute;
+  backface-visibility: hidden;
 }
 
 .fcard {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .bcard {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    margin: auto;
-    border: 3px solid #9c1203;
-    background: url("../images/crest.jpg") center;
-    background-size: 50%;
-    backface-visibility: hidden;
-    border-radius: 12px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  border: 3px solid #9c1203;
+  background: url("../images/crest.jpg") center;
+  background-size: 50%;
+  backface-visibility: hidden;
+  border-radius: 12px;
 }
 
 .harry {
-    background: url("../images/harry.jpg") center no-repeat;
-    background-size: 50%
+  background: url("../images/harry.jpg") center no-repeat;
+  background-size: 50%;
 }
 
 .hermione {
-    background: url("../images/hermione.jpg") center no-repeat;
-    background-size: 50%
+  background: url("../images/hermione.jpg") center no-repeat;
+  background-size: 50%;
 }
 
 .hagrid {
-    background: url("../images/hagrid.jpg") center no-repeat;
-    background-size: 70%
+  background: url("../images/hagrid.jpg") center no-repeat;
+  background-size: 70%;
 }
 
-.Creature_1 {
-    background: url("../images/Creature_1.png") center no-repeat;
-    background-size: 95%
+.gryf {
+  background: url("../images/gryf.png") center no-repeat;
+  background-size: 95%;
 }
 
-.owl {
-    background: url("../images/owl.gif") center no-repeat;
-    background-size: 100%
+.slyth {
+  background: url("../images/slyth.png") center no-repeat;
+  background-size: 130%;
 }
 
-.Creature_4 {
-    background: url("../images/Creature_4.png") center no-repeat;
-    background-size: 85%
+.huff {
+  background: url("../images/huff.png") center no-repeat;
+  background-size: 96%;
 }
 
 .station {
-    background: url("../images/station.jpg") center no-repeat;
-    background-size: 85%
+  background: url("../images/station.jpg") center no-repeat;
+  background-size: 95%;
 }
 
-.snitch {
-    background: url("../images/snitch.jpg") center no-repeat;
-    background-size: 80%
+.rave {
+  background: url("../images/rave.png") center no-repeat;
+  background-size: 100%;
 }
 
 .card.rotate {
-    transition: transform 1.0s;
-    transform: rotateY(180deg);
+  transition: transform 1s;
+  transform: rotateY(180deg);
 }
 
 /*win*/
 
 .winner.none {
-    display: none;
+  display: none;
 }
 
 .winner {
-    font-family: 'Caudex', serif;
-    font-size: 90px;
-    text-align: center;
+  font-family: "Caudex", serif;
+  font-size: 90px;
+  text-align: center;
 }
 
 /*lose*/
 
 .lose.none {
-    display: none;
+  display: none;
 }
 
 .lose {
-    font-family: 'Caudex', serif;
-    font-size: 90px;
-    text-align: center;
+  font-family: "Caudex", serif;
+  font-size: 90px;
+  text-align: center;
 }
 
 /*images*/
 
 .bcard.gryf {
-    background: url("../images/gryf.png") center no-repeat;
-    background-size: 100%;
-        background-color: white;
+  background: url("../images/gryf.png") center no-repeat;
+  background-size: 100%;
+  background-color: white;
 }
 .bcard.slyth {
-    background: url("../images/slyth.png") center no-repeat;
-    background-size: 100%;
-        background-color: white;
+  background: url("../images/slyth.png") center no-repeat;
+  background-size: 100%;
+  background-color: white;
 }
 .bcard.huff {
-    background: url("../images/huff.png");
-    background-size: 100%;
-    background-color: white;
+  background: url("../images/huff.png");
+  background-size: 100%;
+  background-color: white;
 }
 .bcard.rave {
-    background: url("../images/rave.png") center no-repeat;
-    background-size: 100%;
-    background-color: white;
+  background: url("../images/rave.png") center no-repeat;
+  background-size: 100%;
+  background-color: white;
 }
 
 /*win lose animation*/
 
 .flyingHarry {
-    position: absolute;
-    background-image: url('../images/harryfly.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 200px;
-    height: 300px;
-    -webkit-animation: moving 10s linear infinite;
-    -moz-animation: moving 10s linear infinite;
-    -o-animation: moving 10s linear infinite;
+  position: absolute;
+  background-image: url("../images/harryfly.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 200px;
+  height: 300px;
+  -webkit-animation: moving 10s linear infinite;
+  -moz-animation: moving 10s linear infinite;
+  -o-animation: moving 10s linear infinite;
 }
 
 .dementor {
-    position: absolute;
-    background-image: url('../images/Creature_2.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 200px;
-    height: 300px;
-    -webkit-animation: moving 10s linear infinite;
-    -moz-animation: moving 10s linear infinite;
-    -o-animation: moving 10s linear infinite;
+  position: absolute;
+  background-image: url("../images/Creature_2.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 200px;
+  height: 300px;
+  -webkit-animation: moving 10s linear infinite;
+  -moz-animation: moving 10s linear infinite;
+  -o-animation: moving 10s linear infinite;
 }
 
 @keyframes moving {
-	0% { 
-        margin-left: 100%;
-        top:400px;
-    }
-    29% { 
-        margin-left: 50%; 
-        top: 50px; 
-        -webkit-transform: rotate(20deg);
-	    -moz-transform: rotate(20deg);
-        -ms-transform: rotate(20deg);
-	    transform: rotate(20deg);
-    }
-    31% {
-        -webkit-transform: rotate(-20deg);
-	    -moz-transform: rotate(-20deg);
-        -ms-transform: rotate(-20deg);
-	    transform: rotate(-20deg);
-    }
-    60% {
-        margin-left: 0%; 
-        top: 400px;    
-    }
-    100% {
-        margin-left: -100%;
-        top: 400px;
-    }
+  0% {
+    margin-left: 100%;
+    top: 400px;
+  }
+  29% {
+    margin-left: 50%;
+    top: 50px;
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+  }
+  31% {
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+  60% {
+    margin-left: 0%;
+    top: 400px;
+  }
+  100% {
+    margin-left: -100%;
+    top: 400px;
+  }
 }
 
 @-webkit-keyframes moving {
-	0% { 
-        margin-left: 100%;
-        top:400px;
-    }
-    29% { 
-        margin-left: 50%; 
-        top: 50px; 
-        -webkit-transform: rotate(20deg);
-	    -moz-transform: rotate(20deg);
-        -ms-transform: rotate(20deg);
-	    transform: rotate(20deg);
-    }
-    31% {
-        -webkit-transform: rotate(-20deg);
-	    -moz-transform: rotate(-20deg);
-        -ms-transform: rotate(-20deg);
-	    transform: rotate(-20deg);
-    }
-    60% {
-        margin-left: 0%; 
-        top: 400px;    
-    }
-    100% {
-        margin-left: -100%;
-        top: 400px;
-    }
+  0% {
+    margin-left: 100%;
+    top: 400px;
+  }
+  29% {
+    margin-left: 50%;
+    top: 50px;
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+  }
+  31% {
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+  60% {
+    margin-left: 0%;
+    top: 400px;
+  }
+  100% {
+    margin-left: -100%;
+    top: 400px;
+  }
 }
 
 @-moz-keyframes moving {
-	0% { 
-        margin-left: 100%;
-        top:400px;
-    }
-    29% { 
-        margin-left: 50%; 
-        top: 50px; 
-        -webkit-transform: rotate(20deg);
-	    -moz-transform: rotate(20deg);
-        -ms-transform: rotate(20deg);
-	    transform: rotate(20deg);
-    }
-    31% {
-        -webkit-transform: rotate(-20deg);
-	    -moz-transform: rotate(-20deg);
-        -ms-transform: rotate(-20deg);
-	    transform: rotate(-20deg);
-    }
-    60% {
-        margin-left: 0%; 
-        top: 400px;    
-    }
-    100% {
-        margin-left: -100%;
-        top: 400px;
-    }
+  0% {
+    margin-left: 100%;
+    top: 400px;
+  }
+  29% {
+    margin-left: 50%;
+    top: 50px;
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+  }
+  31% {
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+  60% {
+    margin-left: 0%;
+    top: 400px;
+  }
+  100% {
+    margin-left: -100%;
+    top: 400px;
+  }
 }
 
 /*colours*/
 
 #countdown {
-    color: #e3a000;
+  color: #e3a000;
 }
 
 #clicks {
-    color: #e3a000;
+  color: #e3a000;
 }
 
 .fcard {
-    background-color: white;
+  background-color: #fff;
 }
 
 #start-easy {
-    background-color: #9c1203;
-    color: #e3a000;
+  background-color: #9c1203;
+  color: #e3a000;
 }
 #start-medium {
-    background-color: #2d004d;
-    color: #e3a000;
+  background-color: #2d004d;
+  color: #e3a000;
 }
 #start-hard {
-    background-color: #033807;
-    color: #e3a000;
+  background-color: #033807;
+  color: #e3a000;
 }
 #start-extrahard {
-    background-color: #00165e;
-    color: #e3a000;
+  background-color: #00165e;
+  color: #e3a000;
 }
 
 /*#reset {
@@ -392,25 +354,24 @@
 }*/
 
 .title {
-    color: #e3a000;
+  color: #e3a000;
 }
 
 .message {
-    color: #e3a000;
+  color: #e3a000;
 }
 
 .info {
- color: #e3a000;
+  color: #e3a000;
 }
 
 .winner {
-    color: #e3a000;
+  color: #e3a000;
 }
 
 .lose {
-    color:#9c1203;
+  color: #9c1203;
 }
-
 
 /*@media screen and (min-width: 579px) {
     
@@ -441,82 +402,80 @@
     font-size: 20px;
 }*/
 
-
 @media only screen and (max-width: 741px) {
-    
-.card {
+  .card {
     height: 125px;
     width: 85px;
-}
+  }
 
-.start-btn {
+  .start-btn {
     margin: 10px 10px;
     height: 40px;
     width: 140px;
-}
+  }
 
-#start-easy {
+  #start-easy {
     font-size: 20px;
-}
+  }
 
-#start-medium {
+  #start-medium {
     font-size: 20px;
-}
+  }
 
-#start-hard {
+  #start-hard {
     font-size: 20px;
-}
+  }
 
-#start-extrahard {
+  #start-extrahard {
     font-size: 20px;
-}
+  }
 
-.title {
+  .title {
     margin-top: 15px;
     text-align: center;
     font-size: 50px;
-}
+  }
 
-.message {
+  .message {
     margin: 15px 20px;
     text-align: center;
     font-size: 18px;
     padding: 10px;
-}
+  }
 
-.info {
+  .info {
     text-align: center;
     font-size: 12px;
     font-weight: 200;
     margin: 0 10px 10px;
-}
+  }
 
-#countdown {
+  #countdown {
     text-align: center;
     font-size: 25px;
     padding: 10px;
-}
+  }
 
-#clicks {
+  #clicks {
     text-align: center;
     font-size: 25px;
-    padding:10px;
-}
+    padding: 10px;
+  }
 
-#board {
+  #board {
     width: 90%;
     margin: 20px auto;
-}
+  }
 
-.winner {
+  .winner {
     font-size: 30px;
     margin: 5px;
     font-weight: 500;
-}
+  }
 
-.lose {
+  .lose {
     font-size: 30px;
     font-weight: 500;
     margin: 5px;
-}
+  }
 }
