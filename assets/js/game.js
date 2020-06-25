@@ -4,7 +4,6 @@ const refEasyBtn = document.getElementById("start-easy");
 const refMediumBtn = document.getElementById("start-medium");
 const refHardBtn = document.getElementById("start-hard");
 const refXHardBtn = document.getElementById("start-extrahard");
-//const button5 = document.getElementById("reset");
 const gameboard = document.getElementById("board");
 const bcards = document.getElementsByClassName("bcard");
 let countAdd = document.getElementById("rotate-count");
@@ -280,3 +279,7 @@ function addBtnListerner() {
   refHardBtn.addEventListener("click", timerHard);
   refXHardBtn.addEventListener("click", timerExtraHard);
 }
+
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
