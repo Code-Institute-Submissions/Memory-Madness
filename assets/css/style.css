@@ -90,7 +90,6 @@ html {
   transition: 1s;
   border: none;
   background-color: transparent;
-  -webkit-transition: 1s linear;
 }
 
 .bcard,
@@ -115,6 +114,7 @@ html {
   background: url("../images/crest.jpg") center;
   background-size: 50%;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   border-radius: 12px;
 }
 
@@ -161,7 +161,6 @@ html {
 .card.rotate {
   transition: transform 1s;
   transform: rotateY(180deg);
-  -webkit-transition: 1s transform;
 }
 
 /*win*/
