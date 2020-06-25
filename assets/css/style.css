@@ -66,7 +66,7 @@
   border-radius: 15px;
   border: none;
   border-color: none;
-  font-family: "Caudex", serif;
+  font-family: "Chelsea Market", cursive;
   font-size: 30px;
 }
 
@@ -179,29 +179,6 @@
   font-family: "Caudex", serif;
   font-size: 90px;
   text-align: center;
-}
-
-/*images*/
-
-.bcard.gryf {
-  background: url("../images/gryf.png") center no-repeat;
-  background-size: 100%;
-  background-color: white;
-}
-.bcard.slyth {
-  background: url("../images/slyth.png") center no-repeat;
-  background-size: 100%;
-  background-color: white;
-}
-.bcard.huff {
-  background: url("../images/huff.png");
-  background-size: 100%;
-  background-color: white;
-}
-.bcard.rave {
-  background: url("../images/rave.png") center no-repeat;
-  background-size: 100%;
-  background-color: white;
 }
 
 /*win lose animation*/
@@ -319,11 +296,7 @@
 
 /*colours*/
 
-#countdown {
-  color: #e3a000;
-}
-
-#clicks {
+#clicks, #countdown {
   color: #e3a000;
 }
 
@@ -348,59 +321,13 @@
   color: #e3a000;
 }
 
-/*#reset {
-    background-color: #e3a000;
-    color: #00165e;
-}*/
-
-.title {
-  color: #e3a000;
-}
-
-.message {
-  color: #e3a000;
-}
-
-.info {
-  color: #e3a000;
-}
-
-.winner {
-  color: #e3a000;
+.text-colour {
+    color: #e3a000;
 }
 
 .lose {
   color: #9c1203;
 }
-
-/*@media screen and (min-width: 579px) {
-    
-.card {
-    height: 100px;
-    width: 66px;
-}
-
-.start-btn {
-    margin: 10px 10px;
-    height: 40px;
-    width: 150px;
-}
-
-#start-easy {
-    font-size: 20px;
-}
-
-#start-medium {
-    font-size: 20px;
-}
-
-#start-hard {
-    font-size: 20px;
-}
-
-#start-extrahard {
-    font-size: 20px;
-}*/
 
 @media only screen and (max-width: 741px) {
   .card {
