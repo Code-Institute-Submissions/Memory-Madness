@@ -42,15 +42,15 @@ The requirements for the game are as follows.
 The theme of this project is Harry Potter and therefore all page elements should be consistant with what everyone has come to expect from this world.
 
 ### Images:
-Card faces contain images of Harry Potter, Hermoine Granger, Hagrid, 9 ¾ station sign, the snitch, a phoenix, 
-Background image is of the Grand Hall in Hogwarts with floating candles. 
+Card faces contain images of **Harry Potter**, **Hermoine Granger**, **Hagrid**, **9 ¾ station sign**, **the four house badges for Hufflepuff / Ravenclaw / Gryffindoor / Slytherin**. 
+Background image is of the **Grand Hall** in Hogwarts with floating candles. 
 
 Card back displays Hogwarts crest. 
-The background image courtesy of https://harrypotter.fandom.com/. 
-Card face, back and animation images taken from Clipart Library, http://clipart-library.com/.
+The background image courtesy of [fandom website](https://harrypotter.fandom.com/). 
+Card face, back and animation images taken from [Clipart Library](http://clipart-library.com/).
 
 ### Fonts: 
-I have chosen the harryp.ttf and lumos.ttf which keep in line with the theme. The backup to the Harry Potter fonts are Caudex and Chelsea Market.
+I have chosen the harryp font and lumos.font which keep in line with the theme, these were found at [1001freefonts](https://www.1001freefonts.com). The backup to the Harry Potter fonts are Caudex and Chelsea Market from [Google Fonts](https://fonts.google.com).
 
 ### Colours: 
 The colours which are used correspond to colours used within the houses of Hogwarts.
@@ -69,61 +69,62 @@ To begin the process I draw out how I would like the game to appear on mobile an
 In addition to this I have provided a process map where I attempted to draw out the game process with yes / no routes. This allowed me to check through the functions which would be required to generate the game.
 
 ## Testing:
-Throughout the coding I have been able to test if functions have been called through adding console.log() at various stages. This code has now been removed from the final version to keep the code clean.
+``Throughout the coding I have been able to test if functions have been called through adding `console.log()` at various stages.`` This code has now been removed from the final version to keep the code clean.
 Other testing has involved checking start buttons not active once game begins, unable to rotate if card already turned, reset clears array / clear click count and time and board is locked.
 Here is an example of the inspection console during a run:
 
-![Console logs](https://github.com/hob71/MP2---Memory-Madness/blob/master/consolelog.png)
+![Console logs](https://github.com/hob71/Memory-Madness/blob/master/consolelog.png)
 
-Prototype of game was also tested by friends and family. Feedback from a few people was around the layout of the cards on mobile. Original layout was two cards and six rows.
+Prototype of game was also tested by friends and family. 
+Feedback from a few people was around the layout of the cards on mobile. Original layout was two cards and six rows.
 Playability was reduced as the player had to scroll up and down to find the cards to match and also slowed game play when against the clock. Now layout is four by four grid which is viewable on one screen without scrolling.
 Another problem was found when turning last card with countdown on 0, neither win nor lose game.
 In addition to this testing I ran the game on several type of mobile / tablet. This was how I came across the Safari transition issue. Game worked well on Iphone 11 but not on my ipad mini running iOS 12.4.7 or ipad running 13.5.1.
 
 ## Bugs:
-1. Problem-
+1. **Problem-**
 Sound not working on card click. 
-Fix-
+**Fix-**
 Problem with source link found through inspection. Corrected and sound added to match cards.
 
-2. Problem-
+2. **Problem-**
 House badges not displaying when different start button clicked. Tested by adding the class name and works but no when class added through Jquery script.
-Fix-
+**Fix-**
 Still working on and for future version. Images used for card face.
 
-3. Problem-
+3. **Problem-**
 Reset the click counter on restart.
-Fix-
+**Fix-**
 Targeted wrong variable, looked back through code and corrected.
 
-4. Problem-
+4. **Problem-**
 Screen size enlarges when animation appears on mobile devices.
-Fix-
+**Fix-**
 Added the overflow-x: hidden to game screen.
 
-5. Problem-
+5. **Problem-**
 Fonts found do not work, the are 'sanitized' upon page load. Alternative Harry Potter fonts found with same issue.
-Fix-
+**Fix-**
 Switched to Caudex and Chelsea Market with serif and cursive as backup respectively.
 
-6. Problem-
+6. **Problem-**
 Issue with certain versions of Safari on the transition of card rotation. This is to do with the 'all' which is assigned when just adding XXs. Known bug.
-Fix-
+**Fix-**
 Several solutions found on internet, insert -webkit-backface-visible: hidden.
 
-7. Problem-
+7. **Problem-**
 On mobile small deal for wand sound on first card match, after this sound happens on time.
-Fix-
+**Fix-**
 To look at in next version.
 
-8. Problem-
+8. **Problem-**
 If last card turning as countdown hits 0 then no lose or win happens, also start button do not function.
-Fix-
-To compensate for the card rotating at 1s left add an 'if' clause of cardMatchArray.length === 16 && remtime === 0.
+**Fix-**
+``To compensate for the card rotating at 1s left add an 'if' clause of `cardMatchArray.length === 16 && remtime === 0`.``
 
-9. Problem-
+9. **Problem-**
 If game is won and new game started countdown is not cleared and countdown displays new time and old time decreasing invalue alternatively
-Fix-
+**Fix-**
 Believe this is to do with the setInterval but will correct in new version after submission.
 
 ## Technologies used:
@@ -151,15 +152,15 @@ The code in the deployed version is the same as my gitpod repository.
 
 
 ## Credits:
-* Card rotate css code found on stackoverflow.com - user was web-tiki.
-* First 9 lines for function turn() taken from freeCodeCamp.org.
+* Card rotate css code found on [Stackoverflow](https://stackoverflow.com/) - user was web-tiki.
+* First 9 lines for function turn() taken from [freeCodeCamp](https://www.freecodecamp.org).
 * Shuffle card code taken from youtube shuffle card tutorial.
-* As mention previously if would like to credit the source for the images used, https://harrypotter.fandom.com/ and http://clipart-library.com/.
-* For the animation code from https://www.codesdope.com/blog/article/css3-moving-cloud-animation-with-airplane/.
-* Sound of wand credits go to soundbible.com recorded by Mike Koenig.
+* As mention previously I would like to credit the source for the images used, [fandom website](https://harrypotter.fandom.com/) and [Clipart Library](http://clipart-library.com/)..
+* For the animation code from [codesdope.com](https://www.codesdope.com/blog/article/css3-moving-cloud-animation-with-airplane/).
+* Sound of wand credits go to [soundbible](soundbible.com) recorded by Mike Koenig.
 
 ## Acknowledge:
-A big thank you must be give to my mentor, Simen, for his support and motivation through this project. Also for the support and understanding given by student care.
+A big thank you must be give to my mentor, [Simen Daehlin](github.com/Eventyret), for his support and motivation through this project. Also for the support and understanding given by student care.
 
 ## Final Notes:
 Going into this project I knew that learning Javascript was a challenge. Whilst developing the project it has helped me understand the language more and how powerful it is. 
