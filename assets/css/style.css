@@ -71,7 +71,7 @@ html {
   width: 18rem;
   border-radius: 1.5rem;
   border: none;
-  border-color: none;
+  border-color: transparent;
   font-family: "Chelsea Market", cursive;
   font-size: 3rem;
 }
