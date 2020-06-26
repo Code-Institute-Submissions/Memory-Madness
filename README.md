@@ -69,7 +69,7 @@ To begin the process I draw out how I would like the game to appear on mobile an
 In addition to this I have provided a process map where I attempted to draw out the game process with yes / no routes. This allowed me to check through the functions which would be required to generate the game.
 
 ## Testing:
-``Throughout the coding I have been able to test if functions have been called through adding `console.log()` at various stages.`` This code has now been removed from the final version to keep the code clean.
+Throughout the coding I have been able to test if functions have been called through adding ``console.log()`` at various stages. This code has now been removed from the final version to keep the code clean.
 Other testing has involved checking start buttons not active once game begins, unable to rotate if card already turned, reset clears array / clear click count and time and board is locked.
 Here is an example of the inspection console during a run:
 
@@ -120,12 +120,12 @@ To look at in next version.
 8. **Problem-**
 If last card turning as countdown hits 0 then no lose or win happens, also start button do not function.
 **Fix-**
-``To compensate for the card rotating at 1s left add an 'if' clause of `cardMatchArray.length === 16 && remtime === 0`.``
+To compensate for the card rotating at 1s left add an ``if`` clause of ``cardMatchArray.length === 16 && remtime === 0``.
 
 9. **Problem-**
 If game is won and new game started countdown is not cleared and countdown displays new time and old time decreasing invalue alternatively
 **Fix-**
-Believe this is to do with the setInterval but will correct in new version after submission.
+Believe this is to do with the setInterval but will correct in new version after submission due to time constraints.
 
 ## Technologies used:
 * HTML
@@ -138,10 +138,12 @@ The project was developed in Gitpod and pushed to GitHub.
 
 To deploy my Hogwarts Memory Madness project the process was as follows:-
 * Opened GitHub in web browser.
-* Logged in with username and password.
-* Selected my project repository, MP"---Memory Madness.
-* Went to setting and scrolled to GitHub Pages.
-* Chose master branch in 'Source'.
+* Log in with username and password.
+* Select my repositories.
+* Selected my project repository, Memory Madness.
+* Go to 'settings' at top of page.
+* Scroll down to GitHub Pages.
+* Chose master branch in 'Source' dropdown menu.
 
 Below are links to my GitHub and published sites.
 
