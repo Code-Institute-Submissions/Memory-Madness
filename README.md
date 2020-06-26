@@ -147,6 +147,7 @@ The code in the deployed version is the same as my gitpod repository.
 
 
 # Credits:
+* Card rotate css code found on stackoverflow.com - user was web-tiki.
 * First 9 lines for function turn() taken from freeCodeCamp.org.
 * Shuffle card code taken from youtube shuffle card tutorial.
 * As mention previously if would like to credit the source for the images used, https://harrypotter.fandom.com/ and http://clipart-library.com/.
