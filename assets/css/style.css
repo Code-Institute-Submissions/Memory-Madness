@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Caudex&family=Chelsea+Market&display=swap");
-
 * {
   padding: 0;
   margin: 0;
@@ -20,39 +19,40 @@ html {
 
 .title {
   font-family: "Chelsea Market", cursive;
-  margin-top: 20px;
+  margin-top: 2rem;
   text-align: center;
-  font-size: 75px;
+  font-size: 7.5rem;
 }
 
 .message {
   font-family: "Caudex", serif;
-  margin: 20px 30px 10px;
+  margin: 2rem 3rem 1rem;
   text-align: center;
-  font-size: 30px;
-  padding: 20px 20px 5px;
+  font-size: 3rem;
+  padding: 2rem 2rem 0.5rem;
+
 }
 
 .info {
   font-family: "Caudex", serif;
   text-align: center;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 300;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 #clicks,
 #countdown {
   font-family: "Chelsea Market", cursive;
   text-align: center;
-  font-size: 40px;
-  padding: 6px;
+  font-size: 4rem;
+  padding: 0.6rem;
 }
 
 #board {
-  height: 800px;
-  width: 800px;
-  margin: 12px auto 20px;
+  height: 80rem;
+  width: 80rem;
+  margin: 1.2rem auto 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -65,14 +65,14 @@ html {
 }
 
 .start-btn {
-  margin: 10px auto;
-  height: 50px;
-  width: 180px;
-  border-radius: 15px;
+  margin: 1rem auto;
+  height: 5rem;
+  width: 18rem;
+  border-radius: 1.5rem;
   border: none;
   border-color: none;
   font-family: "Chelsea Market", cursive;
-  font-size: 30px;
+  font-size: 3rem;
 }
 
 /*card*/
@@ -82,9 +82,9 @@ html {
 }
 
 .card {
-  height: 168px;
-  width: 120px;
-  margin: 10px 32px;
+  height: 16.8rem;
+  width: 12rem;
+  margin: 1rem 3.2rem;
   position: relative;
   transform-style: preserve-3d;
   transition: 1s;
@@ -96,7 +96,7 @@ html {
 .fcard {
   height: 100%;
   width: 100%;
-  border-radius: 15px;
+  border-radius: 1.5rem;
   position: absolute;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -111,12 +111,12 @@ html {
   height: 100%;
   width: 100%;
   margin: auto;
-  border: 3px solid #9c1203;
+  border: 0.3rem solid #9c1203;
   background: url("../images/crest.jpg") center;
   background-size: 50%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  border-radius: 12px;
+  border-radius: 1.2rem;
 }
 
 .harry {
@@ -172,7 +172,7 @@ html {
 
 .winner {
   font-family: "Caudex", serif;
-  font-size: 90px;
+  font-size: 9rem;
   text-align: center;
 }
 
@@ -184,7 +184,7 @@ html {
 
 .lose {
   font-family: "Caudex", serif;
-  font-size: 90px;
+  font-size: 9rem;
   text-align: center;
 }
 
@@ -195,8 +195,8 @@ html {
   background-image: url("../images/harryfly.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  width: 200px;
-  height: 300px;
+  width: 20rem;
+  height: 30rem;
   -webkit-animation: moving 10s linear infinite;
   -moz-animation: moving 10s linear infinite;
   -o-animation: moving 10s linear infinite;
@@ -207,8 +207,8 @@ html {
   background-image: url("../images/Creature_2.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  width: 200px;
-  height: 300px;
+  width: 20rem;
+  height: 30rem;
   -webkit-animation: moving 10s linear infinite;
   -moz-animation: moving 10s linear infinite;
   -o-animation: moving 10s linear infinite;
@@ -217,87 +217,101 @@ html {
 @keyframes moving {
   0% {
     margin-left: 100%;
-    top: 400px;
+    top: 40rem;
   }
+
   29% {
     margin-left: 50%;
-    top: 50px;
+    top: 5rem;
     -webkit-transform: rotate(20deg);
     -moz-transform: rotate(20deg);
     -ms-transform: rotate(20deg);
     transform: rotate(20deg);
   }
+
   31% {
     -webkit-transform: rotate(-20deg);
     -moz-transform: rotate(-20deg);
     -ms-transform: rotate(-20deg);
     transform: rotate(-20deg);
   }
+
   60% {
     margin-left: 0%;
-    top: 400px;
+    top: 40rem;
   }
+
   100% {
     margin-left: -100%;
-    top: 400px;
+    top: 40rem;
   }
 }
 
 @-webkit-keyframes moving {
   0% {
     margin-left: 100%;
-    top: 400px;
+    top: 40rem;
   }
+
   29% {
     margin-left: 50%;
-    top: 50px;
+    top: 5rem;
     -webkit-transform: rotate(20deg);
     -moz-transform: rotate(20deg);
     -ms-transform: rotate(20deg);
     transform: rotate(20deg);
   }
+
   31% {
     -webkit-transform: rotate(-20deg);
     -moz-transform: rotate(-20deg);
     -ms-transform: rotate(-20deg);
     transform: rotate(-20deg);
   }
+
   60% {
     margin-left: 0%;
-    top: 400px;
+    top: 40rem;
   }
+
   100% {
     margin-left: -100%;
-    top: 400px;
+    top: 40rem;
   }
 }
+
+ 
 
 @-moz-keyframes moving {
   0% {
     margin-left: 100%;
-    top: 400px;
+    top: 40rem;
   }
+
   29% {
     margin-left: 50%;
-    top: 50px;
+    top: 5rem;
     -webkit-transform: rotate(20deg);
     -moz-transform: rotate(20deg);
     -ms-transform: rotate(20deg);
     transform: rotate(20deg);
   }
+
   31% {
     -webkit-transform: rotate(-20deg);
     -moz-transform: rotate(-20deg);
     -ms-transform: rotate(-20deg);
     transform: rotate(-20deg);
   }
+
   60% {
     margin-left: 0%;
-    top: 400px;
+    top: 40rem;
   }
+
   100% {
     margin-left: -100%;
-    top: 400px;
+    top: 40rem;
   }
 }
 
@@ -316,14 +330,17 @@ html {
   background-color: #9c1203;
   color: #e3a000;
 }
+
 #start-medium {
   background-color: #2d004d;
   color: #e3a000;
 }
+
 #start-hard {
   background-color: #033807;
   color: #e3a000;
 }
+
 #start-extrahard {
   background-color: #00165e;
   color: #e3a000;
@@ -338,10 +355,11 @@ html {
 }
 
 @media only screen and (max-width: 741px) {
+
   .card {
-    height: 80px;
-    width: 55px;
-    margin: 10px 10px;
+    height: 8rem;
+    width: 5.5rem;
+    margin: 1rem 1rem;
   }
 
   .buttons {
@@ -349,65 +367,72 @@ html {
   }
 
   .start-btn {
-    margin: 10px 10px;
-    height: 40px;
-    width: 100px;
+    margin: 1rem 1rem;
+    height: 4rem;
+    width: 10rem;
   }
 
   #start-easy,
   #start-medium,
   #start-hard,
   #start-extrahard {
-    font-size: 15px;
+    font-size: 1.5rem;
   }
 
   .title {
-    margin-top: 15px;
+    margin-top: 1.5rem;
     text-align: center;
-    font-size: 50px;
+    font-size: 5rem;
   }
 
   .message {
-    margin: 15px 20px;
+    margin: 1.5rem 2rem;
     text-align: center;
-    font-size: 18px;
-    padding: 10px;
+    font-size: 1.8rem;
+    padding: 1rem;
   }
 
   .info {
     text-align: center;
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: 200;
-    margin: 0 15px 10px;
+    margin: 0 1.5rem 1rem;
   }
 
   #countdown {
     text-align: center;
-    font-size: 25px;
-    padding: 5px;
+    font-size: 2.5rem;
+    padding: 0.5rem;
   }
 
   #clicks {
     text-align: center;
-    font-size: 25px;
-    padding: 5px;
+    font-size: 2.5rem;
+    padding: 0.5rem;
   }
 
   #board {
-    width: 320px;
-    height: 300px;
-    margin: 20px auto;
+    width: 32rem;
+    height: 30rem;
+    margin: 2rem auto;
   }
-
+ 
   .winner {
-    font-size: 30px;
-    margin: 5px;
+    font-size: 3rem;
+    margin: 0.5rem;
     font-weight: 500;
   }
 
   .lose {
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: 500;
-    margin: 5px;
+    margin: 0.5rem;
   }
 }
+
+ 
+
+ 
+
+ 
+
