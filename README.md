@@ -100,6 +100,11 @@ On mobile small deal for wand sound on first card match, after this sound happen
 ### Fix-
 To look at in next version.
 
+### Problem-
+If last card turning as countdown hits 0 then no lose or win happens, also start button do not function.
+### Fix-
+To compensate for the card rotating at 1s left add an 'if' clause of cardMatchArray.length === 16 && remtime === 0.
+
 
 # Wireframe and process mapping:
 To begin the process I draw out how I would like the game to appear on mobile and desktop. On mobile defining where start button line up two by two, number of cards in a column and sizing. On desktop buttons in one line and two rows of cards.
@@ -114,6 +119,7 @@ Here is an example of the inspection console during a run:
 
 Prototype of game was also tested by friends and family. Feedback from a few people was around the layout of the cards on mobile. Original layout was two cards and six rows.
 Playability was reduced as the player had to scroll up and down to find the cards to match and also slowed game play when against the clock. Now layout is four by four grid which is viewable on one screen without scrolling.
+Another problem was found when turning last card with countdown on 0, neither win nor lose game.
 In addition to this testing I ran the game on several type of mobile / tablet. This was how I came across the Safari transition issue. Game worked well on Iphone 11 but not on my ipad mini running iOS 12.4.7 or ipad running 13.5.1.
 
 # Technologies used:
@@ -126,11 +132,11 @@ In addition to this testing I ran the game on several type of mobile / tablet. T
 The project was developed in Gitpod and pushed to GitHub.
 
 To deploy my Hogwarts Memory Madness project the process was as follows:-
-*Opened GitHub in web browser.
-*Logged in with username and password.
-*Selected my project repository, MP"---Memory Madness.
-*Went to setting and scrolled to GitHub Pages.
-*Chose master branch in 'Source'.
+* Opened GitHub in web browser.
+* Logged in with username and password.
+* Selected my project repository, MP"---Memory Madness.
+* Went to setting and scrolled to GitHub Pages.
+* Chose master branch in 'Source'.
 
 Below are links to my GitHub and published sites.
 
@@ -141,11 +147,11 @@ The code in the deployed version is the same as my gitpod repository.
 
 
 # Credits:
- *First 9 lines for function turn() taken from freeCodeCamp.org.
- *Shuffle card code taken from youtube shuffle card tutorial.
- *As mention previously if would like to credit the source for the images used, https://harrypotter.fandom.com/ and http://clipart-library.com/.
- *For the animation code from https://www.codesdope.com/blog/article/css3-moving-cloud-animation-with-airplane/.
- *Sound of wand credits go to soundbible.com recorded by Mike Koenig.
+* First 9 lines for function turn() taken from freeCodeCamp.org.
+* Shuffle card code taken from youtube shuffle card tutorial.
+* As mention previously if would like to credit the source for the images used, https://harrypotter.fandom.com/ and http://clipart-library.com/.
+* For the animation code from https://www.codesdope.com/blog/article/css3-moving-cloud-animation-with-airplane/.
+* Sound of wand credits go to soundbible.com recorded by Mike Koenig.
 
 # Acknowledge:
 ### A big thank you must be give to my mentor, Simen, for his support and motivation through this project. Also for the support and understanding given by student care.
