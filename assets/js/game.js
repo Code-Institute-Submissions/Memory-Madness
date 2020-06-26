@@ -17,10 +17,14 @@ let allCards = false;
 let isFirstCard = false;
 let cardMatchArray = [];
 
-//start lock cards
+/**
+ * start lock cards
+ */
 window.onload = cardLock();
 
-//reset game
+/**
+ * reset game
+ */
 function resetGame() {
   shufflecards();
   document.getElementById("win").classList.add("none");
@@ -44,12 +48,14 @@ function resetGame() {
   addBtnListerner();
 }
 
-//timer and match cards
+/**
+ * timer and match cards
+ */
 refEasyBtn.addEventListener("click", timerEasy);
 function timerEasy() {
   resetGame();
   removeBtnListerner();
-  let time = 120;
+  let time = 75;
   setInterval(function () {
     let remtime = time--;
     if (remtime >= 0) {
@@ -57,18 +63,7 @@ function timerEasy() {
       countdown.innerText = remtime;
     }
 
-    if (cardMatchArray.length === 16 && remtime > 0) {
-      clearInterval();
-      document.getElementById("win").classList.remove("none");
-      document.getElementById("time").innerHTML = "Winner";
-      document.getElementById("flying").classList.add("flyingHarry");
-      cards.forEach(function (card) {
-        card.removeEventListener("click", clicker);
-        addBtnListerner();
-      });
-    }
-
-    if (cardMatchArray.length === 16 && remtime === 0) {
+    if (cardMatchArray.length === 16 && remtime >= 0) {
       clearInterval();
       document.getElementById("win").classList.remove("none");
       document.getElementById("time").innerHTML = "Winner";
@@ -97,30 +92,19 @@ refMediumBtn.addEventListener("click", timerMedium);
 function timerMedium() {
   resetGame();
   removeBtnListerner();
-  let time = 90;
+  let time = 60;
   setInterval(function () {
     let remtime = time--;
     if (remtime >= 0) {
       countdown = document.getElementById("time");
       countdown.innerText = remtime;
     }
-    if (cardMatchArray.length === 16 && remtime > 0) {
+    if (cardMatchArray.length === 16 && remtime >= 0) {
       clearInterval();
       document.getElementById("win").classList.remove("none");
       document.getElementById("time").innerHTML = "Winner";
       document.getElementById("flying").classList.add("flyingHarry");
       clearInterval();
-      cards.forEach(function (card) {
-        card.removeEventListener("click", clicker);
-        addBtnListerner();
-      });
-    }
-
-    if (cardMatchArray.length === 16 && remtime === 0) {
-      clearInterval();
-      document.getElementById("win").classList.remove("none");
-      document.getElementById("time").innerHTML = "Winner";
-      document.getElementById("flying").classList.add("flyingHarry");
       cards.forEach(function (card) {
         card.removeEventListener("click", clicker);
         addBtnListerner();
@@ -145,30 +129,19 @@ refHardBtn.addEventListener("click", timerHard);
 function timerHard() {
   resetGame();
   removeBtnListerner();
-  let time = 60;
+  let time = 45;
   setInterval(function () {
     let remtime = time--;
     if (remtime >= 0) {
       countdown = document.getElementById("time");
       countdown.innerText = remtime;
     }
-    if (cardMatchArray.length === 16 && remtime > 0) {
+    if (cardMatchArray.length === 16 && remtime >= 0) {
       clearInterval();
       document.getElementById("win").classList.remove("none");
       document.getElementById("time").innerHTML = "Winner";
       document.getElementById("flying").classList.add("flyingHarry");
       clearInterval();
-      cards.forEach(function (card) {
-        card.removeEventListener("click", clicker);
-        addBtnListerner();
-      });
-    }
-
-    if (cardMatchArray.length === 16 && remtime === 0) {
-      clearInterval();
-      document.getElementById("win").classList.remove("none");
-      document.getElementById("time").innerHTML = "Winner";
-      document.getElementById("flying").classList.add("flyingHarry");
       cards.forEach(function (card) {
         card.removeEventListener("click", clicker);
         addBtnListerner();
@@ -200,23 +173,12 @@ function timerExtraHard() {
       countdown = document.getElementById("time");
       countdown.innerText = remtime;
     }
-    if (cardMatchArray.length === 16 && remtime > 0) {
+    if (cardMatchArray.length === 16 && remtime >= 0) {
       clearInterval();
       document.getElementById("win").classList.remove("none");
       document.getElementById("time").innerHTML = "Winner";
       document.getElementById("flying").classList.add("flyingHarry");
       clearInterval();
-      cards.forEach(function (card) {
-        card.removeEventListener("click", clicker);
-        addBtnListerner();
-      });
-    }
-
-    if (cardMatchArray.length === 16 && remtime === 0) {
-      clearInterval();
-      document.getElementById("win").classList.remove("none");
-      document.getElementById("time").innerHTML = "Winner";
-      document.getElementById("flying").classList.add("flyingHarry");
       cards.forEach(function (card) {
         card.removeEventListener("click", clicker);
         addBtnListerner();
@@ -237,7 +199,9 @@ function timerExtraHard() {
   }, 1000);
 }
 
-//turning - matching cards
+/**
+ * turning - matching cards
+ */
 cards.forEach(function (card) {
   card.addEventListener("click", turn);
 });
@@ -270,7 +234,9 @@ function turn() {
   }
 }
 
-//count clicked
+/**
+ * count clicked
+ */
 cards.forEach(function (card) {
   card.addEventListener("click", clicker);
 });
@@ -279,7 +245,9 @@ function clicker() {
   countAdd.innerHTML = clicksAdd;
 }
 
-//shuffle cards
+/**
+ * shuffle cards
+ */
 function shufflecards() {
   cards.forEach(function (card) {
     let randomPosition = Math.floor(Math.random() * 16);
@@ -287,32 +255,42 @@ function shufflecards() {
   });
 }
 
-//reset cards after turn
+/**
+ * reset cards after turn
+ */
 function resetBoard() {
   firstcard = null;
   secondcard = null;
   isFirstCard = false;
 }
 
-//Remove rotate class
+/**
+ * Remove rotate class
+ */
 function removeRotateClass() {
   while (removeRotate[0]) {
     removeRotate[0].classList.remove("rotate");
   }
 }
 
-//Lock board on page load
+/**
+ * Lock board on page load
+ */
 function cardLock() {
   boardLock = true;
 }
 
-//Sound
+/**
+ * Sound
+ */
 function playWand() {
   let wand = new Audio("assets/sound/wand.wav");
   wand.play();
 }
 
-//Start button add and remove functions
+/**
+ * Start button add and remove functions
+ */
 function removeBtnListerner() {
   refEasyBtn.removeEventListener("click", timerEasy);
   refMediumBtn.removeEventListener("click", timerMedium);
