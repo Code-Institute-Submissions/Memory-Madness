@@ -101,7 +101,7 @@ Targeted wrong variable, looked back through code and corrected.
 4. **Problem-**
 Screen size enlarges when animation appears on mobile devices.
 **Fix-**
-Added the overflow-x: hidden to game screen.
+Added the ``overflow-x: hidden`` to game screen but this has not fixed problem.
 
 5. **Problem-**
 Fonts found do not work, the are 'sanitized' upon page load. Alternative Harry Potter fonts found with same issue.
@@ -127,6 +127,11 @@ To compensate for the card rotating at 1s left add an ``if`` clause of ``cardMat
 If game is won and new game started countdown is not cleared and countdown displays new time and old time decreasing invalue alternatively
 **Fix-**
 Believe this is to do with the setInterval but will correct in new version after submission due to time constraints.
+
+10. **Problem-**
+If card to rotate is clicked twice very quickly before rotate then card is matched to self and wand sound is called. This only occurs with first card not second card.
+**Fix-**
+Unfortunately not time to fix. Will be fixed in next version.
 
 ## Technologies used:
 * HTML
@@ -161,6 +166,7 @@ The code in the deployed version is the same as my gitpod repository.
 * As mention previously I would like to credit the source for the images used, [fandom website](https://harrypotter.fandom.com/) and [Clipart Library](http://clipart-library.com/)..
 * For the animation code from [codesdope.com](https://www.codesdope.com/blog/article/css3-moving-cloud-animation-with-airplane/).
 * Sound of wand credits go to [soundbible](soundbible.com) recorded by Mike Koenig.
+* Used [Autoprefixer](https://autoprefixer.github.io/) for the additional vendor kits for the transition and transformation of the card.
 
 ## Acknowledge:
 A big thank you must be give to my mentor, [Simen Daehlin](github.com/Eventyret), for his support and motivation through this project. Also for the support and understanding given by student care.
