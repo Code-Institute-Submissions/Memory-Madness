@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Caudex&family=Chelsea+Market&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -7,10 +8,6 @@
 
 html {
   font-size: 62.5%;
-}
-
-body {
-    overflow-x: hidden;
 }
 
 #game-screen {
