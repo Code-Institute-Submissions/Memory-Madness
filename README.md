@@ -67,7 +67,7 @@ I chose the background image as from what I know of Harry Potter there are two i
 ## Wireframe and process mapping:
 To begin the process I draw out how I would like the game to appear on mobile and desktop. On mobile defining where start button line up two by two, number of cards in a column and sizing. On desktop buttons in one line and two rows of cards.
 In addition to this I have provided a process map where I attempted to draw out the game process with yes / no routes. This allowed me to check through the functions which would be required to generate the game.
-These douments can be found at 
+These documents can be found at [wireframes](https://github.com/hob71/MP2---Memory-Madness/blob/master/Wireframe.pdf) and [process flow map](https://github.com/hob71/MP2---Memory-Madness/blob/master/Card-Process-Flow.pdf).
 
 ## Testing:
 Throughout the coding I have been able to test if functions have been called through adding ``console.log()`` at various stages. This code has now been removed from the final version to keep the code clean.
