@@ -9,6 +9,10 @@ html {
   font-size: 62.5%;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 #game-screen {
   height: 100vh;
   width: 99vw;
