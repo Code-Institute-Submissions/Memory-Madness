@@ -15,9 +15,9 @@ The theme for the game is Harry Potter as this is something my daughter has grow
 
 ## User ideas: 
 #### N Hobday: 
- "As a big fan of the Harry Potter franchise the game should incorporate images and sounds from this world. I would like the game to be fun, interactive and challenging. I would prefer to be able to play it on my mobile or tablet.”
+ *"As a big fan of the Harry Potter franchise the game should incorporate images and sounds from this world. I would like the game to be fun, interactive and challenging. I would prefer to be able to play it on my mobile or tablet.”*
 #### J Buckley: 
-"The game should have a magical feel in line with the subject matter. Should by easy to use on mobile as I do not us the laptop for games. The game should be responsive so clicking on cards should trigger the card turn without delay and a countdown to add extra challenge."
+*"The game should have a magical feel in line with the subject matter. Should by easy to use on mobile as I do not us the laptop for games. The game should be responsive so clicking on cards should trigger the card turn without delay and a countdown to add extra challenge."*
 
 ## Requirements:
 The requirements for the game are as follows.
@@ -67,6 +67,7 @@ I chose the background image as from what I know of Harry Potter there are two i
 ## Wireframe and process mapping:
 To begin the process I draw out how I would like the game to appear on mobile and desktop. On mobile defining where start button line up two by two, number of cards in a column and sizing. On desktop buttons in one line and two rows of cards.
 In addition to this I have provided a process map where I attempted to draw out the game process with yes / no routes. This allowed me to check through the functions which would be required to generate the game.
+These douments can be found at 
 
 ## Testing:
 Throughout the coding I have been able to test if functions have been called through adding ``console.log()`` at various stages. This code has now been removed from the final version to keep the code clean.
