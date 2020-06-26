@@ -6,6 +6,10 @@ const refHardBtn = document.getElementById("start-hard");
 const refXHardBtn = document.getElementById("start-extrahard");
 const gameboard = document.getElementById("board");
 const bcards = document.getElementsByClassName("bcard");
+const winner = document.getElementById("win");
+const loser = document.getElementById("lose");
+const timer = document.getElementById("time");
+const fly = document.getElementById("flying");
 let countAdd = document.getElementById("rotate-count");
 let removeRotate = document.getElementsByClassName("card rotate");
 let clicks = 1;
@@ -27,12 +31,12 @@ window.onload = cardLock();
  */
 function resetGame() {
   shufflecards();
-  document.getElementById("win").classList.add("none");
-  document.getElementById("lose").classList.add("none");
-  document.getElementById("time").innerHTML = "Good Luck";
-  document.getElementById("rotate-count").innerHTML = "Ready";
-  document.getElementById("flying").classList.remove("flyingHarry");
-  document.getElementById("flying").classList.remove("dementor");
+  winner.classList.add("none");
+  loser.classList.add("none");
+  timer.innerHTML = "Good Luck";
+  countAdd.innerHTML = "Ready";
+  fly.classList.remove("flyingHarry");
+  fly.classList.remove("dementor");
   cardMatchArray = [];
   boardLock = false;
   isFirstCard = false;
@@ -40,8 +44,6 @@ function resetGame() {
   clicks = 1;
   cards.forEach(function (card) {
     card.addEventListener("click", turn);
-  });
-  cards.forEach(function (card) {
     card.addEventListener("click", clicker);
   });
   removeRotateClass();
@@ -65,9 +67,9 @@ function timerEasy() {
 
     if (cardMatchArray.length === 16 && remtime >= 0) {
       clearInterval();
-      document.getElementById("win").classList.remove("none");
-      document.getElementById("time").innerHTML = "Winner";
-      document.getElementById("flying").classList.add("flyingHarry");
+      winner.classList.remove("none");
+      timer.innerHTML = "Winner";
+      fly.classList.add("flyingHarry");
       cards.forEach(function (card) {
         card.removeEventListener("click", clicker);
         addBtnListerner();
@@ -75,9 +77,9 @@ function timerEasy() {
     }
 
     if (cardMatchArray.length !== 16 && remtime === 0) {
-      document.getElementById("lose").classList.remove("none");
-      document.getElementById("time").innerHTML = "Game Over";
-      document.getElementById("flying").classList.add("dementor");
+      loser.classList.remove("none");
+      timer.innerHTML = "Game Over";
+      fly.classList.add("dementor");
       clearInterval();
       cards.forEach(function (card) {
         card.removeEventListener("click", clicker);
@@ -101,9 +103,9 @@ function timerMedium() {
     }
     if (cardMatchArray.length === 16 && remtime >= 0) {
       clearInterval();
-      document.getElementById("win").classList.remove("none");
-      document.getElementById("time").innerHTML = "Winner";
-      document.getElementById("flying").classList.add("flyingHarry");
+      winner.classList.remove("none");
+      timer.innerHTML = "Winner";
+      fly.classList.add("flyingHarry");
       clearInterval();
       cards.forEach(function (card) {
         card.removeEventListener("click", clicker);
@@ -112,9 +114,9 @@ function timerMedium() {
     }
 
     if (cardMatchArray.length !== 16 && remtime === 0) {
-      document.getElementById("lose").classList.remove("none");
-      document.getElementById("time").innerHTML = "Game Over";
-      document.getElementById("flying").classList.add("dementor");
+      loser.classList.remove("none");
+      timer.innerHTML = "Game Over";
+      fly.classList.add("dementor");
       clearInterval();
       cards.forEach(function (card) {
         card.removeEventListener("click", clicker);
@@ -138,9 +140,9 @@ function timerHard() {
     }
     if (cardMatchArray.length === 16 && remtime >= 0) {
       clearInterval();
-      document.getElementById("win").classList.remove("none");
-      document.getElementById("time").innerHTML = "Winner";
-      document.getElementById("flying").classList.add("flyingHarry");
+      winner.classList.remove("none");
+      timer.innerHTML = "Winner";
+      fly.classList.add("flyingHarry");
       clearInterval();
       cards.forEach(function (card) {
         card.removeEventListener("click", clicker);
@@ -149,9 +151,9 @@ function timerHard() {
     }
 
     if (cardMatchArray.length !== 16 && remtime === 0) {
-      document.getElementById("lose").classList.remove("none");
-      document.getElementById("time").innerHTML = "Game Over";
-      document.getElementById("flying").classList.add("dementor");
+      loser.classList.remove("none");
+      timer.innerHTML = "Game Over";
+      fly.classList.add("dementor");
       clearInterval();
       cards.forEach(function (card) {
         card.removeEventListener("click", clicker);
@@ -175,9 +177,9 @@ function timerExtraHard() {
     }
     if (cardMatchArray.length === 16 && remtime >= 0) {
       clearInterval();
-      document.getElementById("win").classList.remove("none");
-      document.getElementById("time").innerHTML = "Winner";
-      document.getElementById("flying").classList.add("flyingHarry");
+      winner.classList.remove("none");
+      timer.innerHTML = "Winner";
+      fly.classList.add("flyingHarry");
       clearInterval();
       cards.forEach(function (card) {
         card.removeEventListener("click", clicker);
@@ -186,9 +188,9 @@ function timerExtraHard() {
     }
 
     if (cardMatchArray.length !== 16 && remtime === 0) {
-      document.getElementById("lose").classList.remove("none");
-      document.getElementById("time").innerHTML = "Game Over";
-      document.getElementById("flying").classList.add("dementor");
+      loser.classList.remove("none");
+      timer.innerHTML = "Game Over";
+      fly.classList.add("dementor");
       clearInterval();
       cards.forEach(function (card) {
         card.removeEventListener("click", clicker);
