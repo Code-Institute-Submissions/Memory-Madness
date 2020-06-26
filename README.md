@@ -1,11 +1,11 @@
 # Hogwarts Memory Madness
 ## Introduction: 
- The project ‘Hogwarts memory Madness’ is based on the traditional card memory game where a player must turn a card and then turn a second card to see if the pictures match. If no match then the cards are turned back and a new card is picked. The idea is to match the cards in the least amount of turns.
+ The project ‘**Hogwarts Memory Madness**’ is based on the traditional card memory game where a player must turn a card and then turn a second card to see if the pictures match. If no match then the cards are turned back and a new card is picked. The idea is to match the cards in the least amount of turns.
 This version will count the number of turned cards to complete the game plus the additional challenge of beating the clock before the game is over.
 To try and add another challenge there are four different countdown times. 
 The theme for the game is Harry Potter as this is something my daughter has grown up with and loves
-# UX: 
-## User Goals
+## UX: 
+### User Goals
 *	A game which challenges the player to remember where a picture card is positioned on the board.
 *	Interactive game with playability on both desktop and mobile.
 *	Smooth animation of cards rotating when clicked upon.
@@ -13,13 +13,13 @@ The theme for the game is Harry Potter as this is something my daughter has grow
 *	Pop up animation on both win a lose outcomes.
 *	Adhere to the imagery of the Harry Potter them:
 
-# User ideas: 
-## N Hobday: 
+## User ideas: 
+#### N Hobday: 
  "As a big fan of the Harry Potter franchise the game should incorporate images and sounds from this world. I would like the game to be fun, interactive and challenging. I would prefer to be able to play it on my mobile or tablet.”
-## J Buckley: 
+#### J Buckley: 
 "The game should have a magical feel in line with the subject matter. Should by easy to use on mobile as I do not us the laptop for games. The game should be responsive so clicking on cards should trigger the card turn without delay and a countdown to add extra challenge."
 
-# Requirements:
+## Requirements:
 The requirements for the game are as follows.
 *	Create a clock which counts down.
 *	Create a counter to track the number of cards clicked.
@@ -33,15 +33,15 @@ The requirements for the game are as follows.
 *	Check for all cards turned and clock not 0.
 *	No rotation of card if card is already turned.
 *	Reset of game.
-*	HP fonts.
-*	HP images.
-*	HP colour scheme.
-*	HP music.
+*	Harry Potter fonts.
+*	Harry Potter images.
+*	Harry Potter colour scheme.
+*	HP music (if time).
 
-# Design:
+## Design:
 The theme of this project is Harry Potter and therefore all page elements should be consistant with what everyone has come to expect from this world.
 
-## Images:
+### Images:
 Card faces contain images of Harry Potter, Hermoine Granger, Hagrid, 9 ¾ station sign, the snitch, a phoenix, 
 Background image is of the Grand Hall in Hogwarts with floating candles. 
 
@@ -49,10 +49,10 @@ Card back displays Hogwarts crest.
 The background image courtesy of https://harrypotter.fandom.com/. 
 Card face, back and animation images taken from Clipart Library, http://clipart-library.com/.
 
-## Fonts: 
+### Fonts: 
 I have chosen the harryp.ttf and lumos.ttf which keep in line with the theme. The backup to the Harry Potter fonts are Caudex and Chelsea Market.
 
-## Colours: 
+### Colours: 
 The colours which are used correspond to colours used within the houses of Hogwarts.
 The colours are:
 *	#9c1203 – this is a dark red.
@@ -61,56 +61,14 @@ The colours are:
 *	#033807 – this is dark green.
 *	#00165e – this is purple
 
-## Background: 
+### Background: 
 I chose the background image as from what I know of Harry Potter there are two images of Hogwarts which stick in my mind, either the outside image of the building or the Grand Hall.
 
-# Bugs:
-### Problem-
-Sound not working on card click. 
-### Fix-
-Problem with source link found through inspection. Corrected and sound added to match cards.
-
-### Problem-
-House badges not displaying when different start button clicked. Tested by adding the class name and works but no when class added through Jquery script.
-### Fix-
-Still working on and for future version. Images used for card face.
-
-### Problem-
-Reset the click counter on restart.
-### Fix-
-Targeted wrong variable, looked back through code and corrected.
-
-### Problem-
-Screen size enlarges when animation appears on mobile devices.
-### Fix-
-Added the overflow-x: hidden to game screen.
-
-### Problem-
-Fonts found do not work, the are 'sanitized' upon page load. Alternative Harry Potter fonts found with same issue.
-### Fix-
-Switched to Caudex and Chelsea Market with serif and cursive as backup respectively.
-
-### Problem-
-Issue with certain versions of Safari on the transition of card rotation. This is to do with the 'all' which is assigned when just adding XXs. Known bug.
-### Fix-
-Several solutions found on internet, insert -webkit-backface-visible: hidden.
-
-### Problem-
-On mobile small deal for wand sound on first card match, after this sound happens on time.
-### Fix-
-To look at in next version.
-
-### Problem-
-If last card turning as countdown hits 0 then no lose or win happens, also start button do not function.
-### Fix-
-To compensate for the card rotating at 1s left add an 'if' clause of cardMatchArray.length === 16 && remtime === 0.
-
-
-# Wireframe and process mapping:
+## Wireframe and process mapping:
 To begin the process I draw out how I would like the game to appear on mobile and desktop. On mobile defining where start button line up two by two, number of cards in a column and sizing. On desktop buttons in one line and two rows of cards.
 In addition to this I have provided a process map where I attempted to draw out the game process with yes / no routes. This allowed me to check through the functions which would be required to generate the game.
 
-# Testing:
+## Testing:
 Throughout the coding I have been able to test if functions have been called through adding console.log() at various stages. This code has now been removed from the final version to keep the code clean.
 Other testing has involved checking start buttons not active once game begins, unable to rotate if card already turned, reset clears array / clear click count and time and board is locked.
 Here is an example of the inspection console during a run:
@@ -122,13 +80,59 @@ Playability was reduced as the player had to scroll up and down to find the card
 Another problem was found when turning last card with countdown on 0, neither win nor lose game.
 In addition to this testing I ran the game on several type of mobile / tablet. This was how I came across the Safari transition issue. Game worked well on Iphone 11 but not on my ipad mini running iOS 12.4.7 or ipad running 13.5.1.
 
-# Technologies used:
+## Bugs:
+1. Problem-
+Sound not working on card click. 
+Fix-
+Problem with source link found through inspection. Corrected and sound added to match cards.
+
+2. Problem-
+House badges not displaying when different start button clicked. Tested by adding the class name and works but no when class added through Jquery script.
+Fix-
+Still working on and for future version. Images used for card face.
+
+3. Problem-
+Reset the click counter on restart.
+Fix-
+Targeted wrong variable, looked back through code and corrected.
+
+4. Problem-
+Screen size enlarges when animation appears on mobile devices.
+Fix-
+Added the overflow-x: hidden to game screen.
+
+5. Problem-
+Fonts found do not work, the are 'sanitized' upon page load. Alternative Harry Potter fonts found with same issue.
+Fix-
+Switched to Caudex and Chelsea Market with serif and cursive as backup respectively.
+
+6. Problem-
+Issue with certain versions of Safari on the transition of card rotation. This is to do with the 'all' which is assigned when just adding XXs. Known bug.
+Fix-
+Several solutions found on internet, insert -webkit-backface-visible: hidden.
+
+7. Problem-
+On mobile small deal for wand sound on first card match, after this sound happens on time.
+Fix-
+To look at in next version.
+
+8. Problem-
+If last card turning as countdown hits 0 then no lose or win happens, also start button do not function.
+Fix-
+To compensate for the card rotating at 1s left add an 'if' clause of cardMatchArray.length === 16 && remtime === 0.
+
+9. Problem-
+If game is won and new game started countdown is not cleared and countdown displays new time and old time decreasing invalue alternatively
+Fix-
+Believe this is to do with the setInterval but will correct in new version after submission.
+
+## Technologies used:
 * HTML
 * CSS
 * Javascript
 * Bootstrap
 
-# Deployment:
+## Deployment:
 The project was developed in Gitpod and pushed to GitHub.
 
 To deploy my Hogwarts Memory Madness project the process was as follows:-
@@ -140,13 +144,13 @@ To deploy my Hogwarts Memory Madness project the process was as follows:-
 
 Below are links to my GitHub and published sites.
 
-#### Published site: https://hob71.github.io/MP2---Memory-Madness/
-#### GitHub site: https://github.com/hob71/MP2---Memory-Madness
+#### Published site: https://hob71.github.io/Memory-Madness/
+#### GitHub site: https://github.com/hob71/Memory-Madness
 
 The code in the deployed version is the same as my gitpod repository.
 
 
-# Credits:
+## Credits:
 * Card rotate css code found on stackoverflow.com - user was web-tiki.
 * First 9 lines for function turn() taken from freeCodeCamp.org.
 * Shuffle card code taken from youtube shuffle card tutorial.
@@ -154,9 +158,9 @@ The code in the deployed version is the same as my gitpod repository.
 * For the animation code from https://www.codesdope.com/blog/article/css3-moving-cloud-animation-with-airplane/.
 * Sound of wand credits go to soundbible.com recorded by Mike Koenig.
 
-# Acknowledge:
-### A big thank you must be give to my mentor, Simen, for his support and motivation through this project. Also for the support and understanding given by student care.
+## Acknowledge:
+A big thank you must be give to my mentor, Simen, for his support and motivation through this project. Also for the support and understanding given by student care.
 
-# Final Notes:
+## Final Notes:
 Going into this project I knew that learning Javascript was a challenge. Whilst developing the project it has helped me understand the language more and how powerful it is. 
-I have come out of the other side of the project with better understanding of Javascript.
+I have come out of the other side of this project with better understanding of Javascript.
