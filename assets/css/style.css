@@ -87,7 +87,10 @@ html {
   margin: 1rem 3.2rem;
   position: relative;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   transition: 1s;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   border: none;
   background-color: transparent;
 }
@@ -104,6 +107,7 @@ html {
 
 .fcard {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 
 .bcard {
@@ -161,7 +165,11 @@ html {
 
 .card.rotate {
   transition: transform 1s;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 
 /*win*/
