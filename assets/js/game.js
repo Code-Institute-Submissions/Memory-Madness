@@ -8,7 +8,6 @@ const gameboard = document.getElementById("board");
 const bcards = document.getElementsByClassName("bcard");
 let countAdd = document.getElementById("rotate-count");
 let removeRotate = document.getElementsByClassName("card rotate");
-let badgeImg = document.getElementsByClassName("bcard");
 let clicks = 1;
 let firstcard;
 let secondcard;
@@ -58,11 +57,10 @@ function timerEasy() {
       countdown.innerText = remtime;
     }
     if (cardMatchArray.length === 16 && remtime > 0) {
-      clearInterval(time);
+      clearInterval();
       document.getElementById("win").classList.remove("none");
       document.getElementById("time").innerHTML = "Winner";
       document.getElementById("flying").classList.add("flyingHarry");
-      clearInterval(time);
       cards.forEach(function (card) {
         card.removeEventListener("click", clicker);
         addBtnListerner();
@@ -73,10 +71,12 @@ function timerEasy() {
       document.getElementById("lose").classList.remove("none");
       document.getElementById("time").innerHTML = "Game Over";
       document.getElementById("flying").classList.add("dementor");
-      clearInterval(time);
+      clearInterval();
       cards.forEach(function (card) {
         card.removeEventListener("click", clicker);
+        card.removeEventListener("click", turn);
         addBtnListerner();
+        
       });
     }
   }, 1000);
@@ -94,11 +94,11 @@ function timerMedium() {
       countdown.innerText = remtime;
     }
     if (cardMatchArray.length === 16 && remtime > 0) {
-      clearInterval(time);
+      clearInterval();
       document.getElementById("win").classList.remove("none");
       document.getElementById("time").innerHTML = "Winner";
       document.getElementById("flying").classList.add("flyingHarry");
-      clearInterval(time);
+      clearInterval();
       cards.forEach(function (card) {
         card.removeEventListener("click", clicker);
         addBtnListerner();
@@ -109,9 +109,10 @@ function timerMedium() {
       document.getElementById("lose").classList.remove("none");
       document.getElementById("time").innerHTML = "Game Over";
       document.getElementById("flying").classList.add("dementor");
-      clearInterval(time);
+      clearInterval();
       cards.forEach(function (card) {
         card.removeEventListener("click", clicker);
+        card.removeEventListener("click", turn);
         addBtnListerner();
       });
     }
@@ -130,11 +131,11 @@ function timerHard() {
       countdown.innerText = remtime;
     }
     if (cardMatchArray.length === 16 && remtime > 0) {
-      clearInterval(time);
+      clearInterval();
       document.getElementById("win").classList.remove("none");
       document.getElementById("time").innerHTML = "Winner";
       document.getElementById("flying").classList.add("flyingHarry");
-      clearInterval(time);
+      clearInterval();
       cards.forEach(function (card) {
         card.removeEventListener("click", clicker);
         addBtnListerner();
@@ -145,9 +146,10 @@ function timerHard() {
       document.getElementById("lose").classList.remove("none");
       document.getElementById("time").innerHTML = "Game Over";
       document.getElementById("flying").classList.add("dementor");
-      clearInterval(time);
+      clearInterval();
       cards.forEach(function (card) {
         card.removeEventListener("click", clicker);
+        card.removeEventListener("click", turn);
         addBtnListerner();
       });
     }
@@ -166,11 +168,11 @@ function timerExtraHard() {
       countdown.innerText = remtime;
     }
     if (cardMatchArray.length === 16 && remtime > 0) {
-      clearInterval(time);
+      clearInterval();
       document.getElementById("win").classList.remove("none");
       document.getElementById("time").innerHTML = "Winner";
       document.getElementById("flying").classList.add("flyingHarry");
-      clearInterval(time);
+      clearInterval();
       cards.forEach(function (card) {
         card.removeEventListener("click", clicker);
         addBtnListerner();
@@ -181,9 +183,10 @@ function timerExtraHard() {
       document.getElementById("lose").classList.remove("none");
       document.getElementById("time").innerHTML = "Game Over";
       document.getElementById("flying").classList.add("dementor");
-      clearInterval(time);
+      clearInterval();
       cards.forEach(function (card) {
         card.removeEventListener("click", clicker);
+        card.removeEventListener("click", turn);
         addBtnListerner();
       });
     }
