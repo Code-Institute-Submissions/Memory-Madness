@@ -114,14 +114,14 @@ Issue with certain versions of Safari on the transition of card rotation. This i
 Several solutions found on internet, insert -webkit-backface-visible: hidden.
 
 7. **Problem-**
-On mobile small deal for wand sound on first card match, after this sound happens on time.
+On mobile small delay for wand sound on first card match, after this sound happens on time.
 **Fix-**
 To look at in next version.
 
 8. **Problem-**
 If last card turning as countdown hits 0 then no lose or win happens, also start button do not function.
 **Fix-**
-To compensate for the card rotating at 1s left add an ``if`` clause of ``cardMatchArray.length === 16 && remtime === 0``.
+To compensate for the card rotating with 1s left added a ``>=`` to ``cardMatchArray.length === 16 && remtime > 0``.
 
 9. **Problem-**
 If game is won and new game started countdown is not cleared and countdown displays new time and old time decreasing invalue alternatively
